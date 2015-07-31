@@ -1,20 +1,25 @@
 PODS:
-  - Nimble (1.0.0)
-  - Quick (0.3.1)
+  - Nimble (2.0.0-rc.2)
   - TailoredSwiftAutoLayoutHelpers (0.1.0)
 
 DEPENDENCIES:
-  - Nimble
-  - Quick (~> 0.3.1)
+  - Nimble (from `https://github.com/Quick/Nimble.git`, branch `swift-2.0`)
   - TailoredSwiftAutoLayoutHelpers (from `../`)
 
 EXTERNAL SOURCES:
+  Nimble:
+    :branch: swift-2.0
+    :git: https://github.com/Quick/Nimble.git
   TailoredSwiftAutoLayoutHelpers:
     :path: "../"
 
+CHECKOUT OPTIONS:
+  Nimble:
+    :commit: 371f9699af53d50b26186f6700166116fb26c8e6
+    :git: https://github.com/Quick/Nimble.git
+
 SPEC CHECKSUMS:
-  Nimble: 8bee528e5fcc403653076545db562d2b5db7bb87
-  Quick: 824572d3d198d51e52cf4aa722cebf7e59952a35
-  TailoredSwiftAutoLayoutHelpers: 4debfa10ec10429c06397cd37aff1879028847b8
+  Nimble: e3cf5e73a491daf21c2bc88783dbfc55ce8b8e02
+  TailoredSwiftAutoLayoutHelpers: 451e0842e5975887ce1c8099640715ca92a360c9
 
 COCOAPODS: 0.38.2

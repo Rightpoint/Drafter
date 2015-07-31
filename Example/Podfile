@@ -8,6 +8,6 @@ end
 target 'TailoredSwiftAutoLayoutHelpers_Tests', :exclusive => true do
   pod "TailoredSwiftAutoLayoutHelpers", :path => "../"
 
-  pod 'Quick', '~> 0.3.1'
-  pod 'Nimble'
+  pod 'Nimble', :git => 'https://github.com/Quick/Nimble.git', :branch => 'swift-2.0'
+
 end
