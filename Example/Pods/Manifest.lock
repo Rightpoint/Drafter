@@ -1,0 +1,20 @@
+PODS:
+  - Nimble (1.0.0)
+  - Quick (0.3.1)
+  - TailoredSwiftAutoLayoutHelpers (0.1.0)
+
+DEPENDENCIES:
+  - Nimble
+  - Quick (~> 0.3.1)
+  - TailoredSwiftAutoLayoutHelpers (from `../`)
+
+EXTERNAL SOURCES:
+  TailoredSwiftAutoLayoutHelpers:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Nimble: 8bee528e5fcc403653076545db562d2b5db7bb87
+  Quick: 824572d3d198d51e52cf4aa722cebf7e59952a35
+  TailoredSwiftAutoLayoutHelpers: 4debfa10ec10429c06397cd37aff1879028847b8
+
+COCOAPODS: 0.38.2

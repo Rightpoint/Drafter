@@ -1,0 +1,6 @@
+framework module Pods_TailoredSwiftAutoLayoutHelpers_Example {
+  umbrella header "Pods-TailoredSwiftAutoLayoutHelpers_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

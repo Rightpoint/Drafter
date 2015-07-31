@@ -1,0 +1,6 @@
+framework module TailoredSwiftAutoLayoutHelpers {
+  umbrella header "TailoredSwiftAutoLayoutHelpers-umbrella.h"
+
+  export *
+  module * { export * }
+}
