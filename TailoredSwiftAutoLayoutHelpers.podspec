@@ -17,12 +17,11 @@ Pod::Spec.new do |s|
                        * Markdown format.
                        * Don't worry about the indent, we strip it!
                        DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/TailoredSwiftAutoLayoutHelpers"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.homepage         = "https://github.com/raizlabs/TailoredSwiftAutoLayoutHelpers"
   s.license          = 'MIT'
-  s.author           = { "mattThousand" => "matt.d.buckley1212@gmail.com" }
+  s.author           = { "Derek Ostrander" => "derek.ostrander@raizlabs.com", "Matt Buckley" => "matt.buckley@raizlabs.com" }
   s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/TailoredSwiftAutoLayoutHelpers.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+   s.social_media_url = 'https://twitter.com/raizlabs'
 
   s.platform     = :ios, '8.0'
   s.requires_arc = true
@@ -32,7 +31,5 @@ Pod::Spec.new do |s|
     'TailoredSwiftAutoLayoutHelpers' => ['Pod/Assets/*.png']
   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
+
