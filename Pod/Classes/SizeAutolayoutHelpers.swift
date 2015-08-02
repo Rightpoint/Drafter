@@ -9,6 +9,19 @@
 import UIKit
 
 public extension UIView {
+
+    var pinnedHeightConstraint: NSLayoutConstraint? {
+        get {
+            return getSizeConstraint(.Height)
+        }
+    }
+
+    var pinnedWidthConstraint: NSLayoutConstraint? {
+        get {
+            return getSizeConstraint(.Width)
+        }
+    }
+
     func pinHeight(toHeight height: CGFloat,
         priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
         let constraint = NSLayoutConstraint(
@@ -21,7 +34,7 @@ public extension UIView {
             constant: height
         )
         constraint.priority = priority
-        self.addConstraint(constraint)
+        addConstraint(constraint)
 
         return constraint
     }
@@ -38,7 +51,7 @@ public extension UIView {
                 constant: width
             )
             constraint.priority = priority
-            self.addConstraint(constraint)
+            addConstraint(constraint)
             
             return constraint
     }
