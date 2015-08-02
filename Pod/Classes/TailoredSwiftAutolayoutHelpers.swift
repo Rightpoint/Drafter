@@ -10,10 +10,9 @@ import UIKit
 
 let kSuperviewErrorMessage = "Must have superview"
 
-extension UIView {
+public extension UIView {
 
     // MARK: Public Interface
-
     public func pinLeftSpaceToSuperview(withPadding padding: CGFloat = 0.0, priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
         guard let s = superview else {
             assert(false, kSuperviewErrorMessage)
@@ -97,61 +96,18 @@ extension UIView {
     // Getters
 
     var pinnedLeftConstraint: NSLayoutConstraint? {
-        return pinnedConstraint(.Left)
+        return getPinnedConstraint(.Left)
     }
 
     var pinnedRightConstraint: NSLayoutConstraint? {
-        return pinnedConstraint(.Right)
+        return getPinnedConstraint(.Right)
     }
 
     var pinnedTopConstraint: NSLayoutConstraint? {
-        return pinnedConstraint(.Top)
+        return getPinnedConstraint(.Top)
     }
 
     var pinnedBottomConstraint: NSLayoutConstraint? {
-        return pinnedConstraint(.Bottom)
-    }
-
-    // MARK: Private Interface
-
-    // Helpers
-
-    private func pinnedMinConstraint(attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
-        var constraint: NSLayoutConstraint?
-
-        for c in constraints {
-            if c.firstAttribute == attribute && c.secondAttribute == attribute && c.relation == .GreaterThanOrEqual {
-                constraint = c
-                break
-            }
-        }
-
-        return constraint
-    }
-
-    private func pinnedMaxConstraint(attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
-        var constraint: NSLayoutConstraint?
-
-        for c in constraints {
-            if c.firstAttribute == attribute && c.secondAttribute == attribute && c.relation == .LessThanOrEqual {
-                constraint = c
-                break
-            }
-        }
-
-        return constraint
-    }
-
-    private func pinnedConstraint(attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
-        var constraint: NSLayoutConstraint?
-
-        for c in constraints {
-            if c.firstAttribute == attribute && c.secondAttribute == attribute && c.relation == .Equal {
-                constraint = c
-                break
-            }
-        }
-        
-        return constraint
+        return getPinnedConstraint(.Bottom)
     }
 }
