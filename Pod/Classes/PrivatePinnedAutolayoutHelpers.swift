@@ -9,7 +9,6 @@
 import UIKit
 
 internal extension UIView {
-
     func getPinnedMinConstraint(attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
         return get(constraints, f: { (c: NSLayoutConstraint) -> (Bool) in
             return self.isPinnedConstraint(c) &&

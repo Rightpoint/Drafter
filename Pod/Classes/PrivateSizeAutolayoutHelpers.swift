@@ -9,7 +9,4 @@
 import UIKit
 
 internal extension UIView {
-    func getPinnedSizeConstraint(attibute: NSLayoutAttribute) -> NSLayoutConstraint? {
-
-    }
 }
