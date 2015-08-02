@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "65C5EA3033BDB2CEBDFF3262"
+               BlueprintIdentifier = "254E0C0F490E9F46E79D73BB"
                BuildableName = "TailoredSwiftAutoLayoutHelpers.framework"
                BlueprintName = "TailoredSwiftAutoLayoutHelpers"
                ReferencedContainer = "container:Pods.xcodeproj">
