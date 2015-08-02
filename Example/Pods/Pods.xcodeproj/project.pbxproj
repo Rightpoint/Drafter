@@ -24,7 +24,7 @@
 		371AE6F851797120B99579B36B5A5C42 /* BeLessThanOrEqual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C738E78ABB98B5797CA74E15916F6F /* BeLessThanOrEqual.swift */; };
 		398C65DBF91AA0998EA59A2B08A909BE /* ObjCMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AD09D553E46F879C21D5E7D7EB37A2 /* ObjCMatcher.swift */; };
 		3F1B6EFD1ADCECA438F6AC238739CC1A /* Pods-TailoredSwiftAutoLayoutHelpers_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 24702CA877E2F19A01519D986A54043B /* Pods-TailoredSwiftAutoLayoutHelpers_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		431C766C31F439EB42A433AE1B04DB02 /* TailoredSwiftAutolayoutHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8D70C4B65BEEE5F9326F3D758ED29B /* TailoredSwiftAutolayoutHelpers.swift */; };
+		431C766C31F439EB42A433AE1B04DB02 /* PinnedAutolayoutHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8D70C4B65BEEE5F9326F3D758ED29B /* PinnedAutolayoutHelpers.swift */; };
 		432F654C78E9FB936DCDB00B7D3C5226 /* BeIdenticalTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E143E52B4D9BA4006E05CEDB3EB0D50 /* BeIdenticalTo.swift */; };
 		4442335838D693907F3DE02216F9C873 /* BeNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F960A8E72B22AFECBE71D8AFA2EB66 /* BeNil.swift */; };
 		482ABF41AD5F7A4BEAFD4AA796F51D95 /* Expectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C7B0062E942D125A7ED55F1EFF342A /* Expectation.swift */; };
@@ -125,7 +125,7 @@
 		3E72D97C911783DD615E1066377CC329 /* TailoredSwiftAutoLayoutHelpers.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TailoredSwiftAutoLayoutHelpers.modulemap; sourceTree = "<group>"; };
 		3FD2C9DA4B15C011678B1C13530DD4F4 /* BeLessThan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLessThan.swift; path = Nimble/Matchers/BeLessThan.swift; sourceTree = "<group>"; };
 		415AA175EC4ED01168E0057D388A31A0 /* Pods-TailoredSwiftAutoLayoutHelpers_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TailoredSwiftAutoLayoutHelpers_Example.modulemap"; sourceTree = "<group>"; };
-		4B8D70C4B65BEEE5F9326F3D758ED29B /* TailoredSwiftAutolayoutHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TailoredSwiftAutolayoutHelpers.swift; sourceTree = "<group>"; };
+		4B8D70C4B65BEEE5F9326F3D758ED29B /* PinnedAutolayoutHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PinnedAutolayoutHelpers.swift; sourceTree = "<group>"; };
 		4E75461A38A7E3932FA1753545B4EC23 /* NMBExceptionCapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NMBExceptionCapture.h; path = Nimble/objc/NMBExceptionCapture.h; sourceTree = "<group>"; };
 		53450340B49EF236781C46F502AD99EE /* Match.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Match.swift; path = Nimble/Matchers/Match.swift; sourceTree = "<group>"; };
 		559B5D52D95CAB5708B69726EC975B4A /* Pods-TailoredSwiftAutoLayoutHelpers_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TailoredSwiftAutoLayoutHelpers_Example-resources.sh"; sourceTree = "<group>"; };
@@ -325,9 +325,9 @@
 			children = (
 				F7403982D996C6E864248F165B767DF8 /* PrivateAutolayoutHelpers.swift */,
 				309E4158C69CA693851834D9243F5EF7 /* PrivatePinnedAutolayoutHelpers.swift */,
+				4B8D70C4B65BEEE5F9326F3D758ED29B /* PinnedAutolayoutHelpers.swift */,
 				361B5EED3303C354767832464D924CFC /* PrivateSizeAutolayoutHelpers.swift */,
 				63AB79D4D8D39256ABFBED885546092D /* SizeAutolayoutHelpers.swift */,
-				4B8D70C4B65BEEE5F9326F3D758ED29B /* TailoredSwiftAutolayoutHelpers.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -708,7 +708,7 @@
 				EE5D3BFED26E8D8C1E5FD6F5A1D3E508 /* PrivateSizeAutolayoutHelpers.swift in Sources */,
 				16097133CBB4AD00CDD447CDEFF3D53F /* SizeAutolayoutHelpers.swift in Sources */,
 				08375AF47116DA0DC3048ED102FB4336 /* TailoredSwiftAutoLayoutHelpers-dummy.m in Sources */,
-				431C766C31F439EB42A433AE1B04DB02 /* TailoredSwiftAutolayoutHelpers.swift in Sources */,
+				431C766C31F439EB42A433AE1B04DB02 /* PinnedAutolayoutHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

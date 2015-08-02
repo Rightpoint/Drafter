@@ -10,44 +10,51 @@ import UIKit
 
 internal extension UIView {
     func getPinnedMinConstraint(attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
-        return get(constraints, f: { (c: NSLayoutConstraint) -> (Bool) in
-            return self.isPinnedConstraint(c) &&
-                c.firstAttribute == attribute &&
-                c.secondAttribute == attribute &&
-                c.relation == .GreaterThanOrEqual
+        guard let s = superview else {
+            return nil
+        }
+
+        return get(s.constraints, f: { (c: NSLayoutConstraint) -> (Bool) in
+            return self.isPinnedConstraint(c, attribute:attribute, relation: .GreaterThanOrEqual)
         })
     }
 
     func getPinnedMaxConstraint(attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
-        return get(constraints, f: { (c: NSLayoutConstraint) -> (Bool) in
-                return self.isPinnedConstraint(c) &&
-                    c.firstAttribute == attribute &&
-                    c.secondAttribute == attribute &&
-                    c.relation == .LessThanOrEqual
+        guard let s = superview else {
+            return nil
+        }
+
+        return get(s.constraints, f: { (c: NSLayoutConstraint) -> (Bool) in
+            return self.isPinnedConstraint(c, attribute: attribute, relation: .LessThanOrEqual)
         })
     }
 
     func getPinnedConstraint(attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
-        return get(constraints, f: { (c: NSLayoutConstraint) -> (Bool) in
-                return self.isPinnedConstraint(c) &&
-                    c.firstAttribute == attribute &&
-                    c.secondAttribute == attribute &&
-                    c.relation == .Equal
+        guard let s = superview else {
+            return nil
+        }
+
+        return get(s.constraints, f: { (c: NSLayoutConstraint) -> (Bool) in
+            return self.isPinnedConstraint(c, attribute: attribute, relation: .Equal)
         })
     }
 
-    private func isPinnedConstraint(constraint: NSLayoutConstraint) -> Bool {
-        guard let s = superview else {
-            return false
-        }
+    private func isPinnedConstraint(constraint: NSLayoutConstraint,
+        attribute: NSLayoutAttribute,
+        relation: NSLayoutRelation) -> Bool {
+            guard let s = superview else {
+                return false
+            }
 
-        guard let secondItem = constraint.secondItem as? NSObject else {
-            return false
-        }
+            guard let secondItem = constraint.secondItem as? NSObject else {
+                return false
+            }
 
-        let firstItem = constraint.firstItem as! NSObject
-        
-        return (firstItem == self || secondItem == self) &&
-            (firstItem == s || secondItem == s)
+            let firstItem = constraint.firstItem as! NSObject
+
+            return (firstItem == s || secondItem == s) &&
+                constraint.firstAttribute == attribute &&
+                constraint.secondAttribute == attribute &&
+                constraint.relation == relation
     }
 }
