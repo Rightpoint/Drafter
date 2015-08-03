@@ -9,7 +9,7 @@
 import UIKit
 
 internal extension UIView {
-    func getPinnedMinConstraint(attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
+    func pinnedMinConstraint(attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
         guard let s = superview else {
             return nil
         }
@@ -19,7 +19,7 @@ internal extension UIView {
         })
     }
 
-    func getPinnedMaxConstraint(attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
+    func pinnedMaxConstraint(attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
         guard let s = superview else {
             return nil
         }
@@ -29,7 +29,7 @@ internal extension UIView {
         })
     }
 
-    func getPinnedConstraint(attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
+    func pinnedConstraint(attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
         guard let s = superview else {
             return nil
         }

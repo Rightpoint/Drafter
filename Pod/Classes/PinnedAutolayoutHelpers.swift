@@ -96,18 +96,18 @@ public extension UIView {
     // Getters
 
     var pinnedLeftConstraint: NSLayoutConstraint? {
-        return getPinnedConstraint(.Left)
+        return pinnedConstraint(.Left)
     }
 
     var pinnedRightConstraint: NSLayoutConstraint? {
-        return getPinnedConstraint(.Right)
+        return pinnedConstraint(.Right)
     }
 
     var pinnedTopConstraint: NSLayoutConstraint? {
-        return getPinnedConstraint(.Top)
+        return pinnedConstraint(.Top)
     }
 
     var pinnedBottomConstraint: NSLayoutConstraint? {
-        return getPinnedConstraint(.Bottom)
+        return pinnedConstraint(.Bottom)
     }
 }

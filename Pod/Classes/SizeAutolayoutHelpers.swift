@@ -12,13 +12,13 @@ public extension UIView {
 
     var pinnedHeightConstraint: NSLayoutConstraint? {
         get {
-            return getSizeConstraint(.Height)
+            return sizeConstraint(.Height)
         }
     }
 
     var pinnedWidthConstraint: NSLayoutConstraint? {
         get {
-            return getSizeConstraint(.Width)
+            return sizeConstraint(.Width)
         }
     }
 

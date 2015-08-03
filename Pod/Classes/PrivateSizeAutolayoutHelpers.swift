@@ -9,7 +9,7 @@
 import UIKit
 
 internal extension UIView {
-    func getSizeConstraint(attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
+    func sizeConstraint(attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
         return constraint(constraints, f: { (constraint: NSLayoutConstraint) -> (Bool) in
             return constraint.firstAttribute == attribute &&
                 constraint.secondAttribute == .NotAnAttribute &&
@@ -17,7 +17,7 @@ internal extension UIView {
         })
     }
 
-    func getMaxSizeConstraint(attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
+    func maxSizeConstraint(attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
         return constraint(constraints, f: { (constraint: NSLayoutConstraint) -> (Bool) in
             return constraint.firstAttribute == attribute &&
                 constraint.secondAttribute == .NotAnAttribute &&
@@ -25,7 +25,7 @@ internal extension UIView {
         })
     }
 
-    func getMinSizeConstraint(attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
+    func minSizeConstraint(attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
         return constraint(constraints, f: { (constraint: NSLayoutConstraint) -> (Bool) in
             return constraint.firstAttribute == attribute &&
                 constraint.secondAttribute == .NotAnAttribute &&
