@@ -2,12 +2,12 @@ source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
 target 'TailoredSwiftAutoLayoutHelpers_Example', :exclusive => true do
-  pod "TailoredSwiftAutoLayoutHelpers", :path => "../"
+    pod "TailoredSwiftAutoLayoutHelpers", :path => "../"
 end
 
 target 'TailoredSwiftAutoLayoutHelpers_Tests', :exclusive => true do
-  pod "TailoredSwiftAutoLayoutHelpers", :path => "../"
+    pod "TailoredSwiftAutoLayoutHelpers", :path => "../"
 
-  pod 'Nimble', :git => 'https://github.com/Quick/Nimble.git', :branch => 'swift-2.0'
-
+    pod 'Quick', '~> 0.5.0'
+    pod 'Nimble', '2.0.0-rc.2'
 end
