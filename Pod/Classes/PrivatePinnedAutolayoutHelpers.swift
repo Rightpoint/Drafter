@@ -8,15 +8,15 @@
 
 import UIKit
 
-internal extension UIView {
+extension UIView {
     func pinnedMinConstraint(attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
         guard let s = superview else {
             return nil
         }
 
-        return constraint(s.constraints, f: { (c: NSLayoutConstraint) -> (Bool) in
-            return self.isPinnedConstraint(c, attribute:attribute, relation: .GreaterThanOrEqual)
-        })
+        return s.constraints.find { (c: NSLayoutConstraint) -> (Bool) in
+            return self.isPinnedConstraint(c, attribute: attribute, relation: .GreaterThanOrEqual)
+        }
     }
 
     func pinnedMaxConstraint(attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
@@ -24,9 +24,9 @@ internal extension UIView {
             return nil
         }
 
-        return constraint(s.constraints, f: { (c: NSLayoutConstraint) -> (Bool) in
+        return s.constraints.find { (c: NSLayoutConstraint) -> (Bool) in
             return self.isPinnedConstraint(c, attribute: attribute, relation: .LessThanOrEqual)
-        })
+        }
     }
 
     func pinnedConstraint(attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
@@ -34,9 +34,9 @@ internal extension UIView {
             return nil
         }
 
-        return constraint(s.constraints, f: { (c: NSLayoutConstraint) -> (Bool) in
+        return s.constraints.find { (c: NSLayoutConstraint) -> (Bool) in
             return self.isPinnedConstraint(c, attribute: attribute, relation: .Equal)
-        })
+        }
     }
 
     private func isPinnedConstraint(constraint: NSLayoutConstraint,

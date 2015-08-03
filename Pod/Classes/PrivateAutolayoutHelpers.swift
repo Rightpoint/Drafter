@@ -10,9 +10,11 @@ import UIKit
 
 // Generic internal functions
 
-internal func constraint <NSLayoutConstraint> (xs: [NSLayoutConstraint], f:((NSLayoutConstraint) -> (Bool))) -> NSLayoutConstraint? {
-    guard let index = xs.indexOf(f) else {
-        return nil
+extension Array {
+    func find(f: (Element) -> (Bool)) -> Element? {
+        guard let index = self.indexOf(f) else {
+            return nil
+        }
+        return self[index]
     }
-    return xs[index]
 }
