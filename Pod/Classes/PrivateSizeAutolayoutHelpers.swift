@@ -10,7 +10,7 @@ import UIKit
 
 internal extension UIView {
     func getSizeConstraint(attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
-        return get(constraints, f: { (constraint: NSLayoutConstraint) -> (Bool) in
+        return constraint(constraints, f: { (constraint: NSLayoutConstraint) -> (Bool) in
             return constraint.firstAttribute == attribute &&
                 constraint.secondAttribute == .NotAnAttribute &&
                 constraint.relation == .Equal
@@ -18,7 +18,7 @@ internal extension UIView {
     }
 
     func getMaxSizeConstraint(attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
-        return get(constraints, f: { (constraint: NSLayoutConstraint) -> (Bool) in
+        return constraint(constraints, f: { (constraint: NSLayoutConstraint) -> (Bool) in
             return constraint.firstAttribute == attribute &&
                 constraint.secondAttribute == .NotAnAttribute &&
                 constraint.relation == .LessThanOrEqual
@@ -26,7 +26,7 @@ internal extension UIView {
     }
 
     func getMinSizeConstraint(attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
-        return get(constraints, f: { (constraint: NSLayoutConstraint) -> (Bool) in
+        return constraint(constraints, f: { (constraint: NSLayoutConstraint) -> (Bool) in
             return constraint.firstAttribute == attribute &&
                 constraint.secondAttribute == .NotAnAttribute &&
                 constraint.relation == .GreaterThanOrEqual

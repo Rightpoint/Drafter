@@ -14,7 +14,7 @@ internal extension UIView {
             return nil
         }
 
-        return get(s.constraints, f: { (c: NSLayoutConstraint) -> (Bool) in
+        return constraint(s.constraints, f: { (c: NSLayoutConstraint) -> (Bool) in
             return self.isPinnedConstraint(c, attribute:attribute, relation: .GreaterThanOrEqual)
         })
     }
@@ -24,7 +24,7 @@ internal extension UIView {
             return nil
         }
 
-        return get(s.constraints, f: { (c: NSLayoutConstraint) -> (Bool) in
+        return constraint(s.constraints, f: { (c: NSLayoutConstraint) -> (Bool) in
             return self.isPinnedConstraint(c, attribute: attribute, relation: .LessThanOrEqual)
         })
     }
@@ -34,7 +34,7 @@ internal extension UIView {
             return nil
         }
 
-        return get(s.constraints, f: { (c: NSLayoutConstraint) -> (Bool) in
+        return constraint(s.constraints, f: { (c: NSLayoutConstraint) -> (Bool) in
             return self.isPinnedConstraint(c, attribute: attribute, relation: .Equal)
         })
     }
