@@ -93,6 +93,15 @@ public extension UIView {
         return constraint
     }
 
+    public func fillContainer(insets: UIEdgeInsets = UIEdgeInsetsZero, priority: UILayoutPriority = UILayoutPriorityRequired) -> [NSLayoutConstraint] {
+        return [
+            pinTopSpaceToSuperview(withPadding: insets.top, priority: priority),
+            pinLeftSpaceToSuperview(withPadding: insets.left, priority: priority),
+            pinBottomSpaceToSuperview(withPadding: insets.bottom, priority: priority),
+            pinRightSpaceToSuperview(withPadding: insets.right, priority: priority)
+        ]
+    }
+
     // Getters
 
     var pinnedLeftConstraint: NSLayoutConstraint? {
