@@ -8,7 +8,7 @@
 
 import UIKit
 
-// Generic internal functions
+let kSuperviewErrorMessage = "Must have superview"
 
 extension Array {
     func find(f: (Element) -> (Bool)) -> Element? {

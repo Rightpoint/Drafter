@@ -16,6 +16,7 @@
 		607FACEC1AFB9204008FA782 /* SizeAutoLayoutHelperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* SizeAutoLayoutHelperSpec.swift */; };
 		AADF7CB8E4FD797D406A8B08 /* Pods_TailoredSwiftAutoLayoutHelpers_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7333B36AAE2F439FF27029EE /* Pods_TailoredSwiftAutoLayoutHelpers_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B5D098011B72ED6B00746CB0 /* PinnedAutoLayoutHelpersSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52889EA1B72EC2A00D219D2 /* PinnedAutoLayoutHelpersSpec.swift */; };
+		C26DA9581B763A9600DA847C /* CreatorAutolayoutHelperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26DA9571B763A9600DA847C /* CreatorAutolayoutHelperSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		6DBD6884AD64698D9F4F7119 /* TailoredSwiftAutoLayoutHelpers.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TailoredSwiftAutoLayoutHelpers.podspec; path = ../TailoredSwiftAutoLayoutHelpers.podspec; sourceTree = "<group>"; };
 		7333B36AAE2F439FF27029EE /* Pods_TailoredSwiftAutoLayoutHelpers_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TailoredSwiftAutoLayoutHelpers_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B52889EA1B72EC2A00D219D2 /* PinnedAutoLayoutHelpersSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinnedAutoLayoutHelpersSpec.swift; sourceTree = "<group>"; };
+		C26DA9571B763A9600DA847C /* CreatorAutolayoutHelperSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatorAutolayoutHelperSpec.swift; sourceTree = "<group>"; };
 		C4BB5B6CB96ABFE5ED990EAF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		CE21D8DF3202B585B204F682 /* Pods-TailoredSwiftAutoLayoutHelpers_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TailoredSwiftAutoLayoutHelpers_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-TailoredSwiftAutoLayoutHelpers_Example/Pods-TailoredSwiftAutoLayoutHelpers_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D9BD543E83EC434EC339CFD6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				607FACEB1AFB9204008FA782 /* SizeAutoLayoutHelperSpec.swift */,
 				B52889EA1B72EC2A00D219D2 /* PinnedAutoLayoutHelpersSpec.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
+				C26DA9571B763A9600DA847C /* CreatorAutolayoutHelperSpec.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 			files = (
 				607FACEC1AFB9204008FA782 /* SizeAutoLayoutHelperSpec.swift in Sources */,
 				B5D098011B72ED6B00746CB0 /* PinnedAutoLayoutHelpersSpec.swift in Sources */,
+				C26DA9581B763A9600DA847C /* CreatorAutolayoutHelperSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,88 @@
+//
+//  CreatorAutolayoutHelpers.swift
+//  Pods
+//
+//  Created by Derek Ostrander on 8/8/15.
+//
+//
+
+import UIKit
+
+public extension UIView
+{
+    func pinLeftSpaceToSuperview(isActive active: Bool, withPadding padding: CGFloat = 0.0) -> NSLayoutConstraint
+    {
+        guard let s = superview else {
+            assert(false, kSuperviewErrorMessage)
+        }
+
+        let constraint = NSLayoutConstraint(
+            item: self,
+            attribute: .Left,
+            relatedBy: .Equal,
+            toItem: s,
+            attribute: .Left,
+            multiplier: 1.0,
+            constant: padding)
+
+        constraint.active = active
+
+        return constraint
+    }
+
+    public func pinRightSpaceToSuperview(isActive active: Bool, withPadding padding: CGFloat = 0.0) -> NSLayoutConstraint
+    {
+        guard let s = superview else {
+            assert(false, kSuperviewErrorMessage)
+        }
+
+        let constraint = NSLayoutConstraint(
+            item: self,
+            attribute: .Right,
+            relatedBy: .Equal,
+            toItem: s,
+            attribute: .Right,
+            multiplier: 1.0,
+            constant: padding)
+
+        constraint.active = active
+        return constraint
+    }
+
+    public func pinTopSpaceToSuperview(isActive active: Bool, withPadding padding: CGFloat = 0.0) -> NSLayoutConstraint
+    {
+        guard let s = superview else {
+            assert(false, kSuperviewErrorMessage)
+        }
+
+        let constraint = NSLayoutConstraint(
+            item: self,
+            attribute: .Top,
+            relatedBy: .Equal,
+            toItem: s,
+            attribute: .Top,
+            multiplier: 1.0,
+            constant: padding)
+
+        constraint.active = active
+        return constraint
+    }
+    public func pinBottomSpaceToSuperview(isActive active: Bool, withPadding padding: CGFloat = 0.0) -> NSLayoutConstraint
+    {
+        guard let s = superview else {
+            assert(false, kSuperviewErrorMessage)
+        }
+
+        let constraint = NSLayoutConstraint(
+            item: self,
+            attribute: .Bottom,
+            relatedBy: .Equal,
+            toItem: s,
+            attribute: .Bottom,
+            multiplier: 1.0,
+            constant: padding)
+        
+        constraint.active = active
+        return constraint
+    }
+}

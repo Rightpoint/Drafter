@@ -8,98 +8,51 @@
 
 import UIKit
 
-let kSuperviewErrorMessage = "Must have superview"
-
 public extension UIView {
 
     // MARK: Public Interface
     public func pinLeftSpaceToSuperview(withPadding padding: CGFloat = 0.0, priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
-        guard let s = superview else {
-            assert(false, kSuperviewErrorMessage)
-        }
-
-        let constraint = NSLayoutConstraint(
-            item: self,
-            attribute: .Left,
-            relatedBy: .Equal,
-            toItem: superview,
-            attribute: .Left,
-            multiplier: 1.0,
-            constant: padding)
+        let constraint = pinLeftSpaceToSuperview(isActive: false, withPadding: padding)
         constraint.priority = priority
-        s.addConstraint(constraint)
-
+        constraint.active = true
         return constraint
     }
 
     public func pinRightSpaceToSuperview(withPadding padding: CGFloat = 0.0, priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
-        guard let s = superview else {
-            assert(false, kSuperviewErrorMessage)
-        }
-
-        let constraint = NSLayoutConstraint(
-            item: self,
-            attribute: .Right,
-            relatedBy: .Equal,
-            toItem: superview,
-            attribute: .Right,
-            multiplier: 1.0,
-            constant: -padding
-        )
+        let constraint = pinRightSpaceToSuperview(isActive: false, withPadding: padding)
         constraint.priority = priority
-        s.addConstraint(constraint)
-
+        constraint.active = true
         return constraint
     }
 
     public func pinTopSpaceToSuperview(withPadding padding: CGFloat = 0.0, priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
-        guard let s = superview else {
-            assert(false, kSuperviewErrorMessage)
-        }
-
-        let constraint = NSLayoutConstraint(
-            item: self,
-            attribute: .Top,
-            relatedBy: .Equal,
-            toItem: superview,
-            attribute: .Top,
-            multiplier: 1.0,
-            constant: padding
-        )
+        let constraint = pinTopSpaceToSuperview(isActive: false, withPadding: padding)
         constraint.priority = priority
-        s.addConstraint(constraint)
-
+        constraint.active = true
         return constraint
     }
 
 
     public func pinBottomSpaceToSuperview(withPadding padding: CGFloat = 0.0, priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
-        guard let s = superview else {
-            assert(false, kSuperviewErrorMessage)
-        }
-
-        let constraint = NSLayoutConstraint(
-            item: self,
-            attribute: .Bottom,
-            relatedBy: .Equal,
-            toItem: superview,
-            attribute: .Top,
-            multiplier: 1.0,
-            constant: -padding
-        )
+        let constraint = pinBottomSpaceToSuperview(isActive: false, withPadding: padding)
         constraint.priority = priority
-        s.addConstraint(constraint)
-
+        constraint.active = true
         return constraint
     }
 
     public func fillContainer(insets: UIEdgeInsets = UIEdgeInsetsZero, priority: UILayoutPriority = UILayoutPriorityRequired) -> [NSLayoutConstraint] {
-        return [
-            pinTopSpaceToSuperview(withPadding: insets.top, priority: priority),
-            pinLeftSpaceToSuperview(withPadding: insets.left, priority: priority),
-            pinBottomSpaceToSuperview(withPadding: insets.bottom, priority: priority),
-            pinRightSpaceToSuperview(withPadding: insets.right, priority: priority)
+        let constraints = [
+            pinTopSpaceToSuperview(isActive: false, withPadding: insets.top),
+            pinLeftSpaceToSuperview(isActive: false, withPadding: insets.left),
+            pinBottomSpaceToSuperview(isActive: false, withPadding: insets.bottom),
+            pinRightSpaceToSuperview(isActive: false, withPadding: insets.right)
         ]
+
+        return constraints.map { (constraint: NSLayoutConstraint) -> NSLayoutConstraint in
+            constraint.priority = priority
+            constraint.active = true
+            return constraint
+        }
     }
 
     // Getters
