@@ -37,10 +37,10 @@ public extension UIView
         }
 
         let constraint = NSLayoutConstraint(
-            item: self,
+            item: s,
             attribute: .Right,
             relatedBy: .Equal,
-            toItem: s,
+            toItem: self,
             attribute: .Right,
             multiplier: 1.0,
             constant: padding)
@@ -74,10 +74,10 @@ public extension UIView
         }
 
         let constraint = NSLayoutConstraint(
-            item: self,
+            item: s,
             attribute: .Bottom,
             relatedBy: .Equal,
-            toItem: s,
+            toItem: self,
             attribute: .Bottom,
             multiplier: 1.0,
             constant: padding)
