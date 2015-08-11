@@ -12,32 +12,20 @@ public extension UIView {
 
     // MARK: Public Interface
     public func pinLeftSpaceToSuperview(withPadding padding: CGFloat = 0.0, priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
-        let constraint = pinLeftSpaceToSuperview(isActive: false, withPadding: padding)
-        constraint.priority = priority
-        constraint.active = true
-        return constraint
+        return pinLeftSpaceToSuperview(isActive: false, withPadding: padding).activate(priority)
     }
 
     public func pinRightSpaceToSuperview(withPadding padding: CGFloat = 0.0, priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
-        let constraint = pinRightSpaceToSuperview(isActive: false, withPadding: padding)
-        constraint.priority = priority
-        constraint.active = true
-        return constraint
+        return pinRightSpaceToSuperview(isActive: false, withPadding: padding).activate(priority)
     }
 
     public func pinTopSpaceToSuperview(withPadding padding: CGFloat = 0.0, priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
-        let constraint = pinTopSpaceToSuperview(isActive: false, withPadding: padding)
-        constraint.priority = priority
-        constraint.active = true
-        return constraint
+        return pinTopSpaceToSuperview(isActive: false, withPadding: padding).activate(priority)
     }
 
 
     public func pinBottomSpaceToSuperview(withPadding padding: CGFloat = 0.0, priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
-        let constraint = pinBottomSpaceToSuperview(isActive: false, withPadding: padding)
-        constraint.priority = priority
-        constraint.active = true
-        return constraint
+        return pinBottomSpaceToSuperview(isActive: false, withPadding: padding).activate(priority)
     }
 
     public func fillContainer(insets: UIEdgeInsets = UIEdgeInsetsZero, priority: UILayoutPriority = UILayoutPriorityRequired) -> [NSLayoutConstraint] {
@@ -47,12 +35,7 @@ public extension UIView {
             pinBottomSpaceToSuperview(isActive: false, withPadding: insets.bottom),
             pinRightSpaceToSuperview(isActive: false, withPadding: insets.right)
         ]
-
-        return constraints.map { (constraint: NSLayoutConstraint) -> NSLayoutConstraint in
-            constraint.priority = priority
-            constraint.active = true
-            return constraint
-        }
+        return constraints.map { return $0.activate(priority) }
     }
 
     // Getters

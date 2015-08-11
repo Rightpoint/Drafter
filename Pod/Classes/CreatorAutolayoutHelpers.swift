@@ -67,6 +67,7 @@ public extension UIView
         constraint.active = active
         return constraint
     }
+
     public func pinBottomSpaceToSuperview(isActive active: Bool, withPadding padding: CGFloat = 0.0) -> NSLayoutConstraint
     {
         guard let s = superview else {
@@ -81,8 +82,46 @@ public extension UIView
             attribute: .Bottom,
             multiplier: 1.0,
             constant: padding)
-        
+
         constraint.active = active
         return constraint
+    }
+
+    func pinHeight(isActive active: Bool,
+        toView view: UIView?,
+        height constant: CGFloat = 0.0,
+        ratio multiplier: CGFloat = 1.0) -> NSLayoutConstraint {
+            let secondAttribute: NSLayoutAttribute = view == nil ? .Height : .NotAnAttribute
+            let constraint = NSLayoutConstraint(
+                item: self,
+                attribute: .Height,
+                relatedBy: .Equal,
+                toItem: view,
+                attribute: secondAttribute,
+                multiplier: multiplier,
+                constant: constant
+            )
+            constraint.active = active
+
+            return constraint
+    }
+
+    func pinWidth(isActive active: Bool,
+        toView view: UIView?,
+        width constant: CGFloat = 0.0,
+        ratio multiplier: CGFloat = 1.0) -> NSLayoutConstraint {
+            let secondAttribute: NSLayoutAttribute = view == nil ? .Width : .NotAnAttribute
+            let constraint = NSLayoutConstraint(
+                item: self,
+                attribute: .Width,
+                relatedBy: .Equal,
+                toItem: view,
+                attribute: secondAttribute,
+                multiplier: multiplier,
+                constant: constant
+            )
+            constraint.active = active
+            
+            return constraint
     }
 }

@@ -35,6 +35,12 @@ extension NSLayoutConstraint {
             return secondItem
         }
     }
+
+    func activate(activePriority: UILayoutPriority) -> NSLayoutConstraint {
+        priority = activePriority
+        active = true
+        return self
+    }
 }
 
 extension UIView {
