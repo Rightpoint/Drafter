@@ -15,15 +15,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubview(v)
         v.backgroundColor = UIColor.redColor()
-        self.view .addSubview(v)
-        v.translatesAutoresizingMaskIntoConstraints = false
         v.fillContainer(UIEdgeInsetsMake(100, 50, 120, 90))
-        v.setNeedsLayout()
-
-//        v.pinLeft
-
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
