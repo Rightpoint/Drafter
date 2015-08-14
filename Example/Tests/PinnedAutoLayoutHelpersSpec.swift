@@ -22,11 +22,10 @@ class PinnedAutoLayoutHelpersSpec: QuickSpec {
         beforeSuite({
             self.superview.frame = CGRectMake(0, 0, self.kSizeDefault.width, self.kSizeDefault.height)
             self.superview.addSubview(self.view)
-
-            self.view.translatesAutoresizingMaskIntoConstraints = false
         })
         
         beforeEach({
+            self.view.translatesAutoresizingMaskIntoConstraints = true
             expect(self.superview.constraints).to(equal([]))
         })
 
@@ -42,7 +41,7 @@ class PinnedAutoLayoutHelpersSpec: QuickSpec {
                     let insets = self.kInsetsDefault
 
                     self.view.fillContainer(insets, priority: UILayoutPriorityDefaultLow)
-
+                    expect(self.view.translatesAutoresizingMaskIntoConstraints).to(equal(false))
                     expect(self.superview.constraints.count).to(equal(4))
                     expect(self.view.constraints.count).to(equal(0))
                     for constraint: NSLayoutConstraint in self.superview.constraints {

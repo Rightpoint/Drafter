@@ -28,7 +28,6 @@ extension NSLayoutConstraint {
 
     var secondObject: NSObject? {
         get {
-
             guard let secondItem = self.secondItem as? NSObject else {
                 return nil
             }

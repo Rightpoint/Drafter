@@ -16,6 +16,8 @@ public extension UIView
             assert(false, kSuperviewErrorMessage)
         }
 
+        translatesAutoresizingMaskIntoConstraints = false
+
         let constraint = NSLayoutConstraint(
             item: self,
             attribute: .Left,
@@ -36,6 +38,8 @@ public extension UIView
             assert(false, kSuperviewErrorMessage)
         }
 
+        translatesAutoresizingMaskIntoConstraints = false
+
         let constraint = NSLayoutConstraint(
             item: s,
             attribute: .Right,
@@ -54,6 +58,8 @@ public extension UIView
         guard let s = superview else {
             assert(false, kSuperviewErrorMessage)
         }
+
+        translatesAutoresizingMaskIntoConstraints = false
 
         let constraint = NSLayoutConstraint(
             item: self,
@@ -74,6 +80,8 @@ public extension UIView
             assert(false, kSuperviewErrorMessage)
         }
 
+        translatesAutoresizingMaskIntoConstraints = false
+
         let constraint = NSLayoutConstraint(
             item: s,
             attribute: .Bottom,
@@ -91,6 +99,9 @@ public extension UIView
         toView view: UIView?,
         height constant: CGFloat = 0.0,
         ratio multiplier: CGFloat = 1.0) -> NSLayoutConstraint {
+
+            translatesAutoresizingMaskIntoConstraints = false
+
             let secondAttribute: NSLayoutAttribute = view == nil ? .Height : .NotAnAttribute
             let constraint = NSLayoutConstraint(
                 item: self,
@@ -110,6 +121,9 @@ public extension UIView
         toView view: UIView?,
         width constant: CGFloat = 0.0,
         ratio multiplier: CGFloat = 1.0) -> NSLayoutConstraint {
+
+            translatesAutoresizingMaskIntoConstraints = false
+
             let secondAttribute: NSLayoutAttribute = view == nil ? .Width : .NotAnAttribute
             let constraint = NSLayoutConstraint(
                 item: self,
