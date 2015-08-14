@@ -121,8 +121,8 @@
 			children = (
 				607FACEB1AFB9204008FA782 /* SizeAutoLayoutHelperSpec.swift */,
 				B52889EA1B72EC2A00D219D2 /* PinnedAutoLayoutHelpersSpec.swift */,
-				607FACE91AFB9204008FA782 /* Supporting Files */,
 				C26DA9571B763A9600DA847C /* CreatorAutolayoutHelperSpec.swift */,
+				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
