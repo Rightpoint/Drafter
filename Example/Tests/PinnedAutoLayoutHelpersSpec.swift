@@ -38,23 +38,27 @@ class PinnedAutoLayoutHelpersSpec: QuickSpec {
 
                 it("adds requisite constraints", closure: {
                     let insets = self.kInsetsDefault
-                    let size = self.kSizeDefault
 
-
-                    print("\(self.superview.frame)")
                     self.view.fillContainer(insets, priority: UILayoutPriorityDefaultLow)
 
                     expect(self.superview.constraints.count).to(equal(4))
                     expect(self.superview.constraints.first?.priority).to(equal(UILayoutPriorityDefaultLow))
                     expect(self.view.constraints.count).to(equal(0))
-                    self.view.setNeedsLayout()
-                    self.view.layoutIfNeeded()
 
-                    // make sure the frame is correct
-//                    expect(CGRectGetMinX(self.view.frame)).to(equal(insets.left))
-//                    expect(CGRectGetMaxX(self.view.frame)).to(equal(size.width - insets.right))
-//                    expect(CGRectGetMinY(self.view.frame)).to(equal(insets.top))
-//                    expect(CGRectGetMaxY(self.view.frame)).to(equal(size.height - insets.bottom))
+                    for constraint: NSLayoutConstraint in self.superview.constraints {
+                        switch constraint.firstAttribute {
+                        case .Top:
+                            expect(constraint.constant).to(equal(self.kInsetsDefault.top))
+                        case .Left:
+                            expect(constraint.constant).to(equal(self.kInsetsDefault.left))
+                        case .Bottom:
+                            expect(constraint.constant).to(equal(self.kInsetsDefault.bottom))
+                        case .Right:
+                            expect(constraint.constant).to(equal(self.kInsetsDefault.right))
+                        default:
+                            break
+                        }
+                    }
 
                 })
             })
