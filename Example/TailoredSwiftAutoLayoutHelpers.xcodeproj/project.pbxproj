@@ -13,9 +13,10 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* SizeAutoLayoutHelperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* SizeAutoLayoutHelperSpec.swift */; };
+		607FACEC1AFB9204008FA782 /* SizeAutoLayoutHelpersSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* SizeAutoLayoutHelpersSpec.swift */; };
 		AADF7CB8E4FD797D406A8B08 /* Pods_TailoredSwiftAutoLayoutHelpers_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7333B36AAE2F439FF27029EE /* Pods_TailoredSwiftAutoLayoutHelpers_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B5D098011B72ED6B00746CB0 /* PinnedAutoLayoutHelpersSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52889EA1B72EC2A00D219D2 /* PinnedAutoLayoutHelpersSpec.swift */; };
+		C26DA9581B763A9600DA847C /* CreatorAutolayoutHelpersSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26DA9571B763A9600DA847C /* CreatorAutolayoutHelpersSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +41,11 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* TailoredSwiftAutoLayoutHelpers_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TailoredSwiftAutoLayoutHelpers_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* SizeAutoLayoutHelperSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeAutoLayoutHelperSpec.swift; sourceTree = "<group>"; };
+		607FACEB1AFB9204008FA782 /* SizeAutoLayoutHelpersSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeAutoLayoutHelpersSpec.swift; sourceTree = "<group>"; };
 		6DBD6884AD64698D9F4F7119 /* TailoredSwiftAutoLayoutHelpers.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TailoredSwiftAutoLayoutHelpers.podspec; path = ../TailoredSwiftAutoLayoutHelpers.podspec; sourceTree = "<group>"; };
 		7333B36AAE2F439FF27029EE /* Pods_TailoredSwiftAutoLayoutHelpers_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TailoredSwiftAutoLayoutHelpers_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B52889EA1B72EC2A00D219D2 /* PinnedAutoLayoutHelpersSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinnedAutoLayoutHelpersSpec.swift; sourceTree = "<group>"; };
+		C26DA9571B763A9600DA847C /* CreatorAutolayoutHelpersSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatorAutolayoutHelpersSpec.swift; sourceTree = "<group>"; };
 		C4BB5B6CB96ABFE5ED990EAF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		CE21D8DF3202B585B204F682 /* Pods-TailoredSwiftAutoLayoutHelpers_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TailoredSwiftAutoLayoutHelpers_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-TailoredSwiftAutoLayoutHelpers_Example/Pods-TailoredSwiftAutoLayoutHelpers_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D9BD543E83EC434EC339CFD6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -117,8 +119,9 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* SizeAutoLayoutHelperSpec.swift */,
+				607FACEB1AFB9204008FA782 /* SizeAutoLayoutHelpersSpec.swift */,
 				B52889EA1B72EC2A00D219D2 /* PinnedAutoLayoutHelpersSpec.swift */,
+				C26DA9571B763A9600DA847C /* CreatorAutolayoutHelpersSpec.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -371,8 +374,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* SizeAutoLayoutHelperSpec.swift in Sources */,
+				607FACEC1AFB9204008FA782 /* SizeAutoLayoutHelpersSpec.swift in Sources */,
 				B5D098011B72ED6B00746CB0 /* PinnedAutoLayoutHelpersSpec.swift in Sources */,
+				C26DA9581B763A9600DA847C /* CreatorAutolayoutHelpersSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

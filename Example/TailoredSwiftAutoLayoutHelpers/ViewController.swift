@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import TailoredSwiftAutoLayoutHelpers
 
 class ViewController: UIViewController {
 
+    var v: UIView = UIView()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        view.addSubview(v)
+        v.backgroundColor = UIColor.redColor()
+        v.fillContainer(UIEdgeInsetsMake(100, 50, 120, 90))
     }
 
     override func didReceiveMemoryWarning() {

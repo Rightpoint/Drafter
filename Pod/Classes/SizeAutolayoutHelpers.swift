@@ -9,7 +9,6 @@
 import UIKit
 
 public extension UIView {
-
     var pinnedHeightConstraint: NSLayoutConstraint? {
         get {
             return sizeConstraint(.Height)
@@ -24,35 +23,11 @@ public extension UIView {
 
     func pinHeight(toHeight height: CGFloat,
         priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
-        let constraint = NSLayoutConstraint(
-            item: self,
-            attribute: .Height,
-            relatedBy: .Equal,
-            toItem: nil,
-            attribute: .NotAnAttribute,
-            multiplier: 1.0,
-            constant: height
-        )
-        constraint.priority = priority
-        addConstraint(constraint)
-
-        return constraint
+            return pinHeight(isActive: false, toView: nil, height: height).activate(priority)
     }
 
     func pinWidth(toWidth width: CGFloat,
         priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
-            let constraint = NSLayoutConstraint(
-                item: self,
-                attribute: .Width,
-                relatedBy: .Equal,
-                toItem: nil,
-                attribute: .NotAnAttribute,
-                multiplier: 1.0,
-                constant: width
-            )
-            constraint.priority = priority
-            addConstraint(constraint)
-            
-            return constraint
+            return pinWidth(isActive: false, toView: nil, width: width).activate(priority)
     }
 }

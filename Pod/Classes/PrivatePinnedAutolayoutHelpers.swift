@@ -46,15 +46,7 @@ extension UIView {
                 return false
             }
 
-            guard let secondItem = constraint.secondItem as? NSObject else {
-                return false
-            }
-
-            let firstItem = constraint.firstItem as! NSObject
-
-            return (firstItem == s || secondItem == s) &&
-                constraint.firstAttribute == attribute &&
-                constraint.secondAttribute == attribute &&
-                constraint.relation == relation
+            let hasCorrectAttributes: (NSLayoutConstraint -> Bool) = attributeCheck(forAttribute: attribute)
+            return (constraint.firstObject == s || constraint.secondObject == s) && hasCorrectAttributes(constraint) && constraint.relation == relation
     }
 }
