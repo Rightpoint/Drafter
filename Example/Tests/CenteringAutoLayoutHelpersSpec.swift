@@ -38,7 +38,7 @@ class CenteringAutoLayoutHelpersSpec: QuickSpec {
 
         describe("CenteringAutoLayoutHelpers", {
 
-            context("centerInContainer horizontally", {
+            context("centerInContainer along horizontal axis", {
 
                 it("centers view in container horizontally with default priority and default offset", closure: {
                     self.view.centerInContainer(axis: .Horizontal)
@@ -74,7 +74,7 @@ class CenteringAutoLayoutHelpersSpec: QuickSpec {
 
             })
 
-            context("centerInContainer vertically", {
+            context("centerInContainer along vertical axis", {
 
                 it("centers view in container vertically with default priority and default offset", closure: {
                     self.view.centerInContainer(axis: .Vertical)
