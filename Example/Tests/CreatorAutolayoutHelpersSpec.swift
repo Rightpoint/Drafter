@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import TailoredSwiftAutoLayoutHelpers
 
-class CreatorAutolayoutHelperSpec: QuickSpec {
+class CreatorAutolayoutHelpersSpec: QuickSpec {
 
     let superview: UIView = UIView()
     let view: UIView = UIView()
