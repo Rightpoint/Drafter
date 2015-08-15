@@ -25,11 +25,12 @@ class PinnedAutoLayoutHelpersSpec: QuickSpec {
         })
         
         beforeEach({
+            self.view.translatesAutoresizingMaskIntoConstraints = true
             expect(self.superview.constraints).to(equal([]))
         })
 
         afterEach({
-            self.superview.removeConstraints(self.view.constraints)
+            self.superview.removeConstraints(self.superview.constraints)
         })
 
         describe("PinnedAutoLayoutHelpers", {
@@ -40,9 +41,8 @@ class PinnedAutoLayoutHelpersSpec: QuickSpec {
                     let insets = self.kInsetsDefault
 
                     self.view.fillContainer(insets, priority: UILayoutPriorityDefaultLow)
-
+                    expect(self.view.translatesAutoresizingMaskIntoConstraints).to(equal(false))
                     expect(self.superview.constraints.count).to(equal(4))
-                    expect(self.superview.constraints.first?.priority).to(equal(UILayoutPriorityDefaultLow))
                     expect(self.view.constraints.count).to(equal(0))
 
                     for constraint: NSLayoutConstraint in self.superview.constraints {
@@ -58,7 +58,25 @@ class PinnedAutoLayoutHelpersSpec: QuickSpec {
                         default:
                             break
                         }
+
+                        expect(constraint.priority).to(equal(UILayoutPriorityDefaultLow))
                     }
+
+                })
+
+                it("Should layout it's frame correctly", closure: {
+                    let totalWidth = self.kSizeDefault.width
+                    let totalHeight = self.kSizeDefault.height
+                    let frame = CGRect(
+                        x: self.kInsetsDefault.left,
+                        y: self.kInsetsDefault.top,
+                        width: totalWidth - (self.kInsetsDefault.left + self.kInsetsDefault.right),
+                        height: totalHeight - (self.kInsetsDefault.top + self.kInsetsDefault.bottom))
+                    self.view.fillContainer(self.kInsetsDefault)
+                    self.superview.setNeedsLayout()
+                    self.superview.layoutIfNeeded()
+
+                    expect(self.view.frame).to(equal(frame))
 
                 })
             })
