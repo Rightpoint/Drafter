@@ -11,8 +11,8 @@ import UIKit
 public extension UIView {
 
     // MARK: Public Interface
-    public func centerInContainer (withOffset offset: CGFloat = 0.0, axis:UILayoutConstraintAxis, priority:UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
+    public func centerInContainer (forAxis axis:UILayoutConstraintAxis, offset: CGFloat = 0.0, priority:UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
 
-        return centerInContainer(isActive: false, toView: nil, axis: axis, offset: offset).activate(priority)
+        return centerInContainer(isActive: false, axis: axis, offset: offset).activate(priority)
     }
 }

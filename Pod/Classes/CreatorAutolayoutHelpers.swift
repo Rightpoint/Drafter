@@ -139,7 +139,7 @@ public extension UIView
             return constraint
     }
 
-    func centerInContainer(isActive active: Bool, toView view: UIView?, axis: UILayoutConstraintAxis, offset: CGFloat = 0.0) -> NSLayoutConstraint {
+    func centerInContainer(isActive active: Bool, axis: UILayoutConstraintAxis, offset: CGFloat = 0.0) -> NSLayoutConstraint {
 
         guard let s = superview else {
             assert(false, kSuperviewErrorMessage)

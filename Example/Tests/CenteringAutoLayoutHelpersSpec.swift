@@ -41,35 +41,47 @@ class CenteringAutoLayoutHelpersSpec: QuickSpec {
             context("centerInContainer along horizontal axis", {
 
                 it("centers view in container horizontally with default priority and default offset", closure: {
-                    self.view.centerInContainer(axis: .Horizontal)
+                    self.view.centerInContainer(forAxis: .Horizontal)
 
                     let centerXConstraint: NSLayoutConstraint? = self.superview.constraints.first
 
-                    self.validateConstraint(centerXConstraint, priority: UILayoutPriorityRequired, constant: 0.0, centeringAttribute: .CenterX)
+                    expect(centerXConstraint?.firstAttribute).to(equal(NSLayoutAttribute.CenterX))
+                    expect(centerXConstraint?.secondAttribute).to(equal(NSLayoutAttribute.CenterX))
+                    expect(centerXConstraint?.priority).to(equal(UILayoutPriorityRequired))
+                    expect(centerXConstraint?.constant).to(equal(0.0))
                 })
 
                 it("centers view in container horizontally with low priority and default offset", closure: {
-                    self.view.centerInContainer(withOffset: 0.0, axis: .Horizontal, priority: UILayoutPriorityDefaultLow)
+                    self.view.centerInContainer(forAxis: .Horizontal, offset: 0.0, priority: UILayoutPriorityDefaultLow)
 
                     let centerXConstraint: NSLayoutConstraint? = self.superview.constraints.first
 
-                    self.validateConstraint(centerXConstraint, priority: UILayoutPriorityDefaultLow, constant: 0.0, centeringAttribute: .CenterX)
+                    expect(centerXConstraint?.firstAttribute).to(equal(NSLayoutAttribute.CenterX))
+                    expect(centerXConstraint?.secondAttribute).to(equal(NSLayoutAttribute.CenterX))
+                    expect(centerXConstraint?.priority).to(equal(UILayoutPriorityDefaultLow))
+                    expect(centerXConstraint?.constant).to(equal(0.0))
                 })
 
                 it("centers view in container horizontally with positive offset", closure: {
-                    self.view.centerInContainer(withOffset: kPositiveOffsetDefault, axis: .Horizontal, priority: UILayoutPriorityRequired)
+                    self.view.centerInContainer(forAxis: .Horizontal, offset: kPositiveOffsetDefault, priority: UILayoutPriorityRequired)
 
                     let centerXConstraint: NSLayoutConstraint? = self.superview.constraints.first
 
-                    self.validateConstraint(centerXConstraint, priority: UILayoutPriorityRequired, constant: kPositiveOffsetDefault, centeringAttribute: .CenterX)
+                    expect(centerXConstraint?.firstAttribute).to(equal(NSLayoutAttribute.CenterX))
+                    expect(centerXConstraint?.secondAttribute).to(equal(NSLayoutAttribute.CenterX))
+                    expect(centerXConstraint?.priority).to(equal(UILayoutPriorityRequired))
+                    expect(centerXConstraint?.constant).to(equal(kPositiveOffsetDefault))
                 })
 
                 it("centers view in container horizontally with negative offset", closure: {
-                    self.view.centerInContainer(withOffset: kNegativeOffsetDefault, axis: .Horizontal, priority: UILayoutPriorityRequired)
+                    self.view.centerInContainer(forAxis: .Horizontal, offset:kNegativeOffsetDefault, priority: UILayoutPriorityRequired)
 
                     let centerXConstraint: NSLayoutConstraint? = self.superview.constraints.first
 
-                    self.validateConstraint(centerXConstraint, priority: UILayoutPriorityRequired, constant: kNegativeOffsetDefault, centeringAttribute: .CenterX)
+                    expect(centerXConstraint?.firstAttribute).to(equal(NSLayoutAttribute.CenterX))
+                    expect(centerXConstraint?.secondAttribute).to(equal(NSLayoutAttribute.CenterX))
+                    expect(centerXConstraint?.priority).to(equal(UILayoutPriorityRequired))
+                    expect(centerXConstraint?.constant).to(equal(kNegativeOffsetDefault))
                 })
 
             })
@@ -77,50 +89,52 @@ class CenteringAutoLayoutHelpersSpec: QuickSpec {
             context("centerInContainer along vertical axis", {
 
                 it("centers view in container vertically with default priority and default offset", closure: {
-                    self.view.centerInContainer(axis: .Vertical)
+                    self.view.centerInContainer(forAxis: .Vertical)
 
                     let centerYConstraint: NSLayoutConstraint? = self.superview.constraints.first
 
-                    self.validateConstraint(centerYConstraint, priority: UILayoutPriorityRequired, constant: 0.0, centeringAttribute: .CenterY)
+                    expect(centerYConstraint?.firstAttribute).to(equal(NSLayoutAttribute.CenterY))
+                    expect(centerYConstraint?.secondAttribute).to(equal(NSLayoutAttribute.CenterY))
+                    expect(centerYConstraint?.priority).to(equal(UILayoutPriorityRequired))
+                    expect(centerYConstraint?.constant).to(equal(0.0))
                 })
 
                 it("centers view in container vertically with low priority and default offset", closure: {
-                    self.view.centerInContainer(withOffset: 0.0, axis: .Vertical, priority: UILayoutPriorityDefaultLow)
+                    self.view.centerInContainer(forAxis: .Vertical, offset: 0.0, priority: UILayoutPriorityDefaultLow)
 
                     let centerYConstraint: NSLayoutConstraint? = self.superview.constraints.first
 
-                    self.validateConstraint(centerYConstraint, priority: UILayoutPriorityDefaultLow, constant: 0.0, centeringAttribute: .CenterY)
+                    expect(centerYConstraint?.firstAttribute).to(equal(NSLayoutAttribute.CenterY))
+                    expect(centerYConstraint?.secondAttribute).to(equal(NSLayoutAttribute.CenterY))
+                    expect(centerYConstraint?.priority).to(equal(UILayoutPriorityDefaultLow))
+                    expect(centerYConstraint?.constant).to(equal(0.0))
                 })
 
                 it("centers view in container vertically with positive offset", closure: {
-                    self.view.centerInContainer(withOffset: kPositiveOffsetDefault, axis: .Vertical, priority: UILayoutPriorityRequired)
+                    self.view.centerInContainer(forAxis: .Vertical, offset: kPositiveOffsetDefault, priority: UILayoutPriorityRequired)
 
                     let centerYConstraint: NSLayoutConstraint? = self.superview.constraints.first
 
-                    self.validateConstraint(centerYConstraint, priority:UILayoutPriorityRequired, constant: kPositiveOffsetDefault, centeringAttribute: .CenterY)
+                    expect(centerYConstraint?.firstAttribute).to(equal(NSLayoutAttribute.CenterY))
+                    expect(centerYConstraint?.secondAttribute).to(equal(NSLayoutAttribute.CenterY))
+                    expect(centerYConstraint?.priority).to(equal(UILayoutPriorityRequired))
+                    expect(centerYConstraint?.constant).to(equal(kPositiveOffsetDefault))
                 })
 
                 it("centers view in container vertically with negative offset", closure: {
-                    self.view.centerInContainer(withOffset: kNegativeOffsetDefault, axis: .Vertical, priority: UILayoutPriorityRequired)
+                    self.view.centerInContainer(forAxis: .Vertical, offset: kNegativeOffsetDefault, priority: UILayoutPriorityRequired)
 
                     let centerYConstraint: NSLayoutConstraint? = self.superview.constraints.first
 
-                    self.validateConstraint(centerYConstraint, priority: UILayoutPriorityRequired, constant: kNegativeOffsetDefault, centeringAttribute: .CenterY)
+                    expect(centerYConstraint?.firstAttribute).to(equal(NSLayoutAttribute.CenterY))
+                    expect(centerYConstraint?.secondAttribute).to(equal(NSLayoutAttribute.CenterY))
+                    expect(centerYConstraint?.priority).to(equal(UILayoutPriorityRequired))
+                    expect(centerYConstraint?.constant).to(equal(kNegativeOffsetDefault))
                 })
 
             })
         })
 
     }
-
-    // MARK: Private Interface
-
-    private func validateConstraint(constraint: NSLayoutConstraint?, priority: UILayoutPriority, constant: CGFloat, centeringAttribute: NSLayoutAttribute) -> Void {
-        expect(constraint?.firstAttribute).to(equal(centeringAttribute))
-        expect(constraint?.secondAttribute).to(equal(centeringAttribute))
-        expect(constraint?.priority).to(equal(priority))
-        expect(constraint?.constant).to(equal(constant))
-    }
-
 
 }
