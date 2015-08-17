@@ -23,7 +23,6 @@ public extension UIView {
         return pinTopSpaceToSuperview(isActive: false, withPadding: padding).activate(priority)
     }
 
-
     public func pinBottomSpaceToSuperview(withPadding padding: CGFloat = 0.0, priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
         return pinBottomSpaceToSuperview(isActive: false, withPadding: padding).activate(priority)
     }
