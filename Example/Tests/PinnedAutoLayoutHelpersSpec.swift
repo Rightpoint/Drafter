@@ -44,6 +44,7 @@ class PinnedAutoLayoutHelpersSpec: QuickSpec {
                     expect(self.view.translatesAutoresizingMaskIntoConstraints).to(equal(false))
                     expect(self.superview.constraints.count).to(equal(4))
                     expect(self.view.constraints.count).to(equal(0))
+
                     for constraint: NSLayoutConstraint in self.superview.constraints {
                         switch constraint.firstAttribute {
                         case .Top:

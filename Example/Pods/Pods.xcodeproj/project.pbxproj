@@ -75,6 +75,7 @@
 		B0997D9B089A6EF2220F3C26D443D566 /* Nimble.h in Headers */ = {isa = PBXBuildFile; fileRef = CAF8FD7758FFF9AB8594FBE2ABE2021E /* Nimble.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B157607E05ADEA8751D444C92E375153 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C555CE37FEB460F73A9450692DA28692 /* XCTest.framework */; };
 		B494925B0FE0D4C8BE9971D171173093 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC61FA26B03CF3B6FEE2C39871161430 /* Foundation.framework */; };
+		B56AF8131B7E211800456390 /* CenteringAutoLayoutHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56AF8111B7E20FD00456390 /* CenteringAutoLayoutHelpers.swift */; };
 		B886828066A7A03E49225AE97571E9A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC61FA26B03CF3B6FEE2C39871161430 /* Foundation.framework */; };
 		B89431B25BA3EEDB5A7A6F9942977014 /* AsyncMatcherWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1D4327C69FE9AEB5732E102C64E803 /* AsyncMatcherWrapper.swift */; };
 		BBCD229BB90046D24B9B62C751165A94 /* ExampleGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E08DAF279222C5F74FA35112917DCE /* ExampleGroup.swift */; };
@@ -225,6 +226,7 @@
 		B0827EE6881D7D1DCC551920EBE02CCE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B08E5FF477436C9AB784207BFE2A94D2 /* Quick-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Quick-dummy.m"; sourceTree = "<group>"; };
 		B3FF6CC17CFCB62AA279AEF15E3BFC2B /* ObjCExpectation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObjCExpectation.swift; path = Nimble/ObjCExpectation.swift; sourceTree = "<group>"; };
+		B56AF8111B7E20FD00456390 /* CenteringAutoLayoutHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenteringAutoLayoutHelpers.swift; sourceTree = "<group>"; };
 		B7ADCDA23F656721C90D86FD6A09323B /* AssertionDispatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssertionDispatcher.swift; path = Nimble/Adapters/AssertionDispatcher.swift; sourceTree = "<group>"; };
 		BA5DA7E75289930188682DB1ADCBB5F6 /* Pods-TailoredSwiftAutoLayoutHelpers_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TailoredSwiftAutoLayoutHelpers_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -565,6 +567,7 @@
 			isa = PBXGroup;
 			children = (
 				B054DE9474C21E15EA0E8C9A02AB6A1F /* PinnedAutolayoutHelpers.swift */,
+				B56AF8111B7E20FD00456390 /* CenteringAutoLayoutHelpers.swift */,
 				9C5E0C087C5A50E35D46E248BD1F4458 /* PrivateAutolayoutHelpers.swift */,
 				344B1BE161F11E9FD4AB550EC73700D9 /* PrivatePinnedAutolayoutHelpers.swift */,
 				6DBD6CBA307A2BC0307A1DD63C05B948 /* PrivateSizeAutolayoutHelpers.swift */,
@@ -854,6 +857,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B56AF8131B7E211800456390 /* CenteringAutoLayoutHelpers.swift in Sources */,
 				7354911E98CC1420E055709469FD0C17 /* PinnedAutolayoutHelpers.swift in Sources */,
 				C26DA9541B76366B00DA847C /* CreatorAutolayoutHelpers.swift in Sources */,
 				7F9251489EB4F5F88CBBD554E6F70B42 /* PrivateAutolayoutHelpers.swift in Sources */,

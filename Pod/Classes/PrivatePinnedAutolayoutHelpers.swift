@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIView {
+internal extension UIView {
     func pinnedMinConstraint(attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
         guard let s = superview else {
             return nil
@@ -39,6 +39,9 @@ extension UIView {
         }
     }
 
+
+    // MARK: Private Interface
+    
     private func isPinnedConstraint(constraint: NSLayoutConstraint,
         attribute: NSLayoutAttribute,
         relation: NSLayoutRelation) -> Bool {

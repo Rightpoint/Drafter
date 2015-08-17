@@ -138,4 +138,26 @@ public extension UIView
             
             return constraint
     }
+
+    func centerInContainer(isActive active: Bool, axis: UILayoutConstraintAxis, offset: CGFloat = 0.0) -> NSLayoutConstraint {
+
+        guard let s = superview else {
+            assert(false, kSuperviewErrorMessage)
+        }
+
+        let axisAttribute: NSLayoutAttribute = axis == .Horizontal ? .CenterX : .CenterY
+        
+        let constraint = NSLayoutConstraint(
+            item: self,
+            attribute: axisAttribute,
+            relatedBy: .Equal,
+            toItem: s,
+            attribute: axisAttribute,
+            multiplier: 1.0,
+            constant: offset)
+
+        constraint.active = active
+
+        return constraint
+    }
 }
