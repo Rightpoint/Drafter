@@ -39,8 +39,29 @@ internal extension UIView {
         }
     }
 
+    func pinSpaceToSuperview(attribute: NSLayoutAttribute, padding: CGFloat, active: Bool, priority: UILayoutPriority) -> NSLayoutConstraint
+    {
+        guard let s = superview else {
+            assert(false, kSuperviewErrorMessage)
+        }
+        let isPositive = attribute != .Right && attribute != .Bottom && attribute != .RightMargin && attribute != .BottomMargin
 
-    // MARK: Private Interface
+        translatesAutoresizingMaskIntoConstraints = false
+
+        let constraint = NSLayoutConstraint(
+            item: isPositive ? self : s,
+            attribute: attribute,
+            relatedBy: .Equal,
+            toItem: isPositive ? s : self,
+            attribute: attribute,
+            multiplier: 1.0,
+            constant: padding)
+
+        constraint.active = active
+        return constraint
+    }
+
+    // MARK: Private
     
     private func isPinnedConstraint(constraint: NSLayoutConstraint,
         attribute: NSLayoutAttribute,
