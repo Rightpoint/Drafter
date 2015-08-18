@@ -22,12 +22,14 @@ public extension UIView {
     }
 
     func pinHeight(toHeight height: CGFloat,
+        isActive active: Bool = true,
         priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
-            return pinHeight(isActive: false, toView: nil, height: height).activate(priority)
+            return pinHeight(isActive: active, toView: nil, height: height, priority: priority)
     }
 
     func pinWidth(toWidth width: CGFloat,
+        isActive active: Bool = true,
         priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
-            return pinWidth(isActive: false, toView: nil, width: width).activate(priority)
+            return pinWidth(isActive: active, toView: nil, width: width, priority: priority)
     }
 }
