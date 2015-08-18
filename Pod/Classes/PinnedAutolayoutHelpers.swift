@@ -11,20 +11,32 @@ import UIKit
 public extension UIView {
 
     // MARK: Public Interface
-    public func pinLeftSpaceToSuperview(withPadding padding: CGFloat = 0.0, priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
-        return pinLeftSpaceToSuperview(isActive: false, withPadding: padding).activate(priority)
+    func pinLeftSpaceToSuperview(withPadding padding: CGFloat = 0.0,
+        isActive active: Bool = true,
+        priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint
+    {
+        return pinSpaceToSuperview(.Left, padding: padding, active: active, priority: priority)
     }
 
-    public func pinRightSpaceToSuperview(withPadding padding: CGFloat = 0.0, priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
-        return pinRightSpaceToSuperview(isActive: false, withPadding: padding).activate(priority)
+    public func pinRightSpaceToSuperview(withPadding padding: CGFloat = 0.0,
+        isActive active: Bool = true,
+        priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint
+    {
+        return pinSpaceToSuperview(.Right, padding: padding, active: active, priority: priority)
     }
 
-    public func pinTopSpaceToSuperview(withPadding padding: CGFloat = 0.0, priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
-        return pinTopSpaceToSuperview(isActive: false, withPadding: padding).activate(priority)
+    public func pinTopSpaceToSuperview(withPadding padding: CGFloat = 0.0,
+        isActive active: Bool = true,
+        priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint
+    {
+        return pinSpaceToSuperview(.Top, padding: padding, active: active, priority: priority)
     }
 
-    public func pinBottomSpaceToSuperview(withPadding padding: CGFloat = 0.0, priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
-        return pinBottomSpaceToSuperview(isActive: false, withPadding: padding).activate(priority)
+    public func pinBottomSpaceToSuperview(withPadding padding: CGFloat = 0.0,
+        isActive active: Bool = true,
+        priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint
+    {
+        return pinSpaceToSuperview(.Bottom, padding: padding, active: active, priority: priority)
     }
 
     public func fillContainer(insets: UIEdgeInsets = UIEdgeInsetsZero, priority: UILayoutPriority = UILayoutPriorityRequired) -> [NSLayoutConstraint] {

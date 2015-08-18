@@ -10,95 +10,11 @@ import UIKit
 
 public extension UIView
 {
-    func pinLeftSpaceToSuperview(isActive active: Bool, withPadding padding: CGFloat = 0.0) -> NSLayoutConstraint
-    {
-        guard let s = superview else {
-            assert(false, kSuperviewErrorMessage)
-        }
-
-        translatesAutoresizingMaskIntoConstraints = false
-
-        let constraint = NSLayoutConstraint(
-            item: self,
-            attribute: .Left,
-            relatedBy: .Equal,
-            toItem: s,
-            attribute: .Left,
-            multiplier: 1.0,
-            constant: padding)
-
-        constraint.active = active
-
-        return constraint
-    }
-
-    public func pinRightSpaceToSuperview(isActive active: Bool, withPadding padding: CGFloat = 0.0) -> NSLayoutConstraint
-    {
-        guard let s = superview else {
-            assert(false, kSuperviewErrorMessage)
-        }
-
-        translatesAutoresizingMaskIntoConstraints = false
-
-        let constraint = NSLayoutConstraint(
-            item: s,
-            attribute: .Right,
-            relatedBy: .Equal,
-            toItem: self,
-            attribute: .Right,
-            multiplier: 1.0,
-            constant: padding)
-
-        constraint.active = active
-        return constraint
-    }
-
-    public func pinTopSpaceToSuperview(isActive active: Bool, withPadding padding: CGFloat = 0.0) -> NSLayoutConstraint
-    {
-        guard let s = superview else {
-            assert(false, kSuperviewErrorMessage)
-        }
-
-        translatesAutoresizingMaskIntoConstraints = false
-
-        let constraint = NSLayoutConstraint(
-            item: self,
-            attribute: .Top,
-            relatedBy: .Equal,
-            toItem: s,
-            attribute: .Top,
-            multiplier: 1.0,
-            constant: padding)
-
-        constraint.active = active
-        return constraint
-    }
-
-    public func pinBottomSpaceToSuperview(isActive active: Bool, withPadding padding: CGFloat = 0.0) -> NSLayoutConstraint
-    {
-        guard let s = superview else {
-            assert(false, kSuperviewErrorMessage)
-        }
-
-        translatesAutoresizingMaskIntoConstraints = false
-
-        let constraint = NSLayoutConstraint(
-            item: s,
-            attribute: .Bottom,
-            relatedBy: .Equal,
-            toItem: self,
-            attribute: .Bottom,
-            multiplier: 1.0,
-            constant: padding)
-
-        constraint.active = active
-        return constraint
-    }
-
     func pinHeight(isActive active: Bool,
         toView view: UIView?,
         height constant: CGFloat = 0.0,
-        ratio multiplier: CGFloat = 1.0) -> NSLayoutConstraint {
+        ratio multiplier: CGFloat = 1.0,
+        priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
 
             translatesAutoresizingMaskIntoConstraints = false
 
@@ -112,6 +28,7 @@ public extension UIView
                 multiplier: multiplier,
                 constant: constant
             )
+            constraint.priority = priority
             constraint.active = active
 
             return constraint
@@ -120,7 +37,8 @@ public extension UIView
     func pinWidth(isActive active: Bool,
         toView view: UIView?,
         width constant: CGFloat = 0.0,
-        ratio multiplier: CGFloat = 1.0) -> NSLayoutConstraint {
+        ratio multiplier: CGFloat = 1.0,
+        priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
 
             translatesAutoresizingMaskIntoConstraints = false
 
@@ -134,7 +52,9 @@ public extension UIView
                 multiplier: multiplier,
                 constant: constant
             )
+            constraint.priority = priority
             constraint.active = active
+
             
             return constraint
     }
