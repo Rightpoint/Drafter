@@ -77,7 +77,14 @@ class PinnedAutoLayoutHelpersSpec: QuickSpec {
                     self.superview.layoutIfNeeded()
 
                     expect(self.view.frame).to(equal(frame))
+                })
 
+                it("should get correct constraints ", closure: {
+                    self.view.fillContainer(self.kInsetsDefault)
+                    expect(self.view.pinnedLeftConstraint?.constant).to(equal(self.kInsetsDefault.left))
+                    expect(self.view.pinnedRightConstraint?.constant).to(equal(self.kInsetsDefault.right))
+                    expect(self.view.pinnedTopConstraint?.constant).to(equal(self.kInsetsDefault.top))
+                    expect(self.view.pinnedBottomConstraint?.constant).to(equal(self.kInsetsDefault.bottom))
                 })
             })
 

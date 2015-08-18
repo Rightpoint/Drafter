@@ -19,11 +19,5 @@ class ViewController: UIViewController {
         v.backgroundColor = UIColor.redColor()
         v.fillContainer(UIEdgeInsetsMake(100, 50, 120, 90))
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 }
 
