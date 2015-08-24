@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import TailoredSwiftAutoLayoutHelpers
 
-class SpacingLayoutHelpers: QuickSpec {
+class SpacingLayoutHelpersSpec: QuickSpec {
 
     let superview = UIView()
     let subviews = [UIView(), UIView(), UIView(), UIView()]
