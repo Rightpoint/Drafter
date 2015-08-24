@@ -70,23 +70,64 @@ class SpacingLayoutHelpersSpec: QuickSpec {
                 expect(constraints.count).to(equal(self.subviews.count-1))
 
                 var constraint = constraints[0]
-                expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Bottom))
-                expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Top))
+                expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Top))
+                expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Bottom))
                 expect(constraint.constant).to(equal(self.kSpaceDefault))
                 expect(constraint.active).to(equal(true))
 
                 constraint = constraints[1]
-                expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Bottom))
-                expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Top))
+                expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Top))
+                expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Bottom))
                 expect(constraint.constant).to(equal(self.kSpaceDefault))
                 expect(constraint.active).to(equal(true))
 
                 constraint = constraints[2]
-                expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Bottom))
-                expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Top))
+                expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Top))
+                expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Bottom))
                 expect(constraint.constant).to(equal(self.kSpaceDefault))
                 expect(constraint.active).to(equal(true))
+            })
+        }
 
+        describe("Layout Tests") {
+            it("should layout horiontally", closure: {
+                self.subviews[0].pinLeftSpaceToSuperview()
+
+                for view in self.subviews {
+                    view.pinTopSpaceToSuperview()
+                }
+
+                self.superview.space(subviews: self.subviews, alongAxis: .Horizontal, withPadding: self.kSpaceDefault)
+
+                self.superview.setNeedsLayout()
+                self.superview.layoutIfNeeded()
+
+                for var i = 0; i <  self.subviews.count - 1; i++ {
+                    let view = self.subviews[i]
+                    let view2 = self.subviews[i+1]
+                    let xDiff: CGFloat = CGRectGetMinX(view2.frame) - CGRectGetMaxX(view.frame)
+                    expect(xDiff).to(equal(self.kSpaceDefault))
+                }
+            })
+
+            it("should layout vertically", closure: {
+                self.subviews[0].pinTopSpaceToSuperview()
+
+                for view in self.subviews {
+                    view.pinLeftSpaceToSuperview()
+                }
+
+                self.superview.space(subviews: self.subviews, alongAxis: .Vertical, withPadding: self.kSpaceDefault)
+
+                self.superview.setNeedsLayout()
+                self.superview.layoutIfNeeded()
+
+                for var i = 0; i <  self.subviews.count - 1; i++ {
+                    let view = self.subviews[i]
+                    let view2 = self.subviews[i+1]
+                    let xDiff: CGFloat = CGRectGetMinY(view2.frame) - CGRectGetMaxY(view.frame)
+                    expect(xDiff).to(equal(self.kSpaceDefault))
+                }
             })
         }
     }
