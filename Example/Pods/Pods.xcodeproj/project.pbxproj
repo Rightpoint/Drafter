@@ -80,7 +80,8 @@
 		B89431B25BA3EEDB5A7A6F9942977014 /* AsyncMatcherWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1D4327C69FE9AEB5732E102C64E803 /* AsyncMatcherWrapper.swift */; };
 		BBCD229BB90046D24B9B62C751165A94 /* ExampleGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E08DAF279222C5F74FA35112917DCE /* ExampleGroup.swift */; };
 		BE1E2ADC47C4A1F3F11842BBB69D219A /* NSString+QCKSelectorName.h in Headers */ = {isa = PBXBuildFile; fileRef = DD206D84FA694697DF8655A70948DE81 /* NSString+QCKSelectorName.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C23CE8101B7E80DB006AD991 /* AttachmentLayoutHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23CE80F1B7E80DB006AD991 /* AttachmentLayoutHelpers.swift */; };
+		C24145AE1B8AB101002722C6 /* SpacingLayoutHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24145AA1B8A7468002722C6 /* SpacingLayoutHelpers.swift */; };
+		C24145AF1B8AB10C002722C6 /* AttachmentLayoutHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23CE80F1B7E80DB006AD991 /* AttachmentLayoutHelpers.swift */; };
 		C26DA9541B76366B00DA847C /* CreatorAutolayoutHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C271D58B1B7630190088C6F9 /* CreatorAutolayoutHelpers.swift */; };
 		C839843F810AAF0339FDC19988E713E5 /* Callsite.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA733D34B7D5A1F9A1E9A06D20ACAE5E /* Callsite.swift */; };
 		D1E2FF07C1D5A647B62133F91D49A735 /* BeGreaterThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5669E6C0C0CC20394C0AAD7D6D9EB35 /* BeGreaterThan.swift */; };
@@ -236,6 +237,7 @@
 		C205F3CC690596305A071BEB5AFB00ED /* World+DSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "World+DSL.h"; path = "Quick/DSL/World+DSL.h"; sourceTree = "<group>"; };
 		C2088F018C71BD2D419CBA0BF0836A37 /* BeEmpty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeEmpty.swift; path = Nimble/Matchers/BeEmpty.swift; sourceTree = "<group>"; };
 		C23CE80F1B7E80DB006AD991 /* AttachmentLayoutHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentLayoutHelpers.swift; sourceTree = "<group>"; };
+		C24145AA1B8A7468002722C6 /* SpacingLayoutHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpacingLayoutHelpers.swift; sourceTree = "<group>"; };
 		C271D58B1B7630190088C6F9 /* CreatorAutolayoutHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatorAutolayoutHelpers.swift; sourceTree = "<group>"; };
 		C414D73D3BDC8F94CB4670D2557E1FC2 /* QuickSpec.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QuickSpec.m; path = Quick/QuickSpec.m; sourceTree = "<group>"; };
 		C555CE37FEB460F73A9450692DA28692 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -576,6 +578,7 @@
 				8AE1B784BCFCF9DE4D39D5E21598E603 /* SizeAutolayoutHelpers.swift */,
 				C271D58B1B7630190088C6F9 /* CreatorAutolayoutHelpers.swift */,
 				C23CE80F1B7E80DB006AD991 /* AttachmentLayoutHelpers.swift */,
+				C24145AA1B8A7468002722C6 /* SpacingLayoutHelpers.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -833,7 +836,6 @@
 				4046CB0F55BEBD40E0B5041D0FB6E3E4 /* Contain.swift in Sources */,
 				2BA13A92772F65D4A17F30BD1CCF746B /* DSL+Wait.swift in Sources */,
 				E60BD7DA3F4FFA51C32FE082B07A9D7D /* DSL.m in Sources */,
-				C23CE8101B7E80DB006AD991 /* AttachmentLayoutHelpers.swift in Sources */,
 				0007D99431E0A01BCBF540A1CD75BCFC /* DSL.swift in Sources */,
 				79E80639658418B4E54E5F35BCE250B5 /* EndWith.swift in Sources */,
 				2C2652B1A400B752507EECB8B081E712 /* Equal.swift in Sources */,
@@ -861,7 +863,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C24145AF1B8AB10C002722C6 /* AttachmentLayoutHelpers.swift in Sources */,
 				B56AF8131B7E211800456390 /* CenteringAutoLayoutHelpers.swift in Sources */,
+				C24145AE1B8AB101002722C6 /* SpacingLayoutHelpers.swift in Sources */,
 				7354911E98CC1420E055709469FD0C17 /* PinnedAutolayoutHelpers.swift in Sources */,
 				C26DA9541B76366B00DA847C /* CreatorAutolayoutHelpers.swift in Sources */,
 				7F9251489EB4F5F88CBBD554E6F70B42 /* PrivateAutolayoutHelpers.swift in Sources */,

@@ -9,6 +9,7 @@
 import UIKit
 
 let kSuperviewErrorMessage = "Must have superview"
+let kViewHierarchyMessage = "Must be in the same view hierarchy"
 
 extension Array {
     func find(f: (Element) -> (Bool)) -> Element? {

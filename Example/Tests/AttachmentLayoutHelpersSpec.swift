@@ -44,6 +44,8 @@ class AttachmentLayoutHelpersSpec: QuickSpec {
         describe("Adding Tests") {
             it("adds top correct constraint", closure: {
                 let constraint = self.view.attachTop(toBottomOfView: self.view2, withPadding: self.kSpaceDefault)
+                expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Bottom))
+                expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Top))
                 expect(constraint.constant).to(equal(self.kSpaceDefault))
                 expect(constraint.active).to(equal(true))
                 expect(self.view.translatesAutoresizingMaskIntoConstraints).to(equal(false))
@@ -52,6 +54,8 @@ class AttachmentLayoutHelpersSpec: QuickSpec {
 
             it("adds left correct constraint", closure: {
                 let constraint = self.view.attachLeft(toRightOfView: self.view2, withPadding: self.kSpaceDefault)
+                expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Right))
+                expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Left))
                 expect(constraint.constant).to(equal(self.kSpaceDefault))
                 expect(constraint.active).to(equal(true))
                 expect(self.view.translatesAutoresizingMaskIntoConstraints).to(equal(false))
@@ -60,6 +64,8 @@ class AttachmentLayoutHelpersSpec: QuickSpec {
 
             it("adds bottom correct constraint", closure: {
                 let constraint = self.view.attachBottom(toTopOfView: self.view2, withPadding: self.kSpaceDefault)
+                expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Bottom))
+                expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Top))
                 expect(constraint.constant).to(equal(self.kSpaceDefault))
                 expect(constraint.active).to(equal(true))
                 expect(self.view.translatesAutoresizingMaskIntoConstraints).to(equal(false))
@@ -68,6 +74,8 @@ class AttachmentLayoutHelpersSpec: QuickSpec {
 
             it("adds right correct constraint", closure: {
                 let constraint = self.view.attachRight(toLeftOfView: self.view2, withPadding: self.kSpaceDefault)
+                expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Right))
+                expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Left))
                 expect(constraint.constant).to(equal(self.kSpaceDefault))
                 expect(constraint.active).to(equal(true))
                 expect(self.view.translatesAutoresizingMaskIntoConstraints).to(equal(false))
