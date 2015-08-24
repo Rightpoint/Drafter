@@ -45,33 +45,45 @@ class SpacingLayoutHelpers: QuickSpec {
             it("adds correct horizontal constraints", closure: {
                 let constraints = self.superview.space(subviews: self.subviews, alongAxis: .Horizontal, withPadding: self.kSpaceDefault)
                 expect(constraints.count).to(equal(self.subviews.count-1))
-                for constraint in constraints {
-                    expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Right))
-                    expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Left))
-                    expect(constraint.constant).to(equal(self.kSpaceDefault))
-                    expect(constraint.active).to(equal(true))
-                }
-            })
-
-            it("adds left vertical constraint", closure: {
-                let constraints = self.superview.space(subviews: self.subviews, alongAxis: .Vertical)
-                expect(constraints.count).to(equal(self.subviews.count-1))
 
                 var constraint = constraints[0]
-                expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Top))
-                expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Bottom))
+                expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Right))
+                expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Left))
                 expect(constraint.constant).to(equal(self.kSpaceDefault))
                 expect(constraint.active).to(equal(true))
 
                 constraint = constraints[1]
-                expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Top))
-                expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Bottom))
+                expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Right))
+                expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Left))
                 expect(constraint.constant).to(equal(self.kSpaceDefault))
                 expect(constraint.active).to(equal(true))
 
                 constraint = constraints[2]
-                expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Top))
-                expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Bottom))
+                expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Right))
+                expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Left))
+                expect(constraint.constant).to(equal(self.kSpaceDefault))
+                expect(constraint.active).to(equal(true))
+            })
+
+            it("adds left vertical constraint", closure: {
+                let constraints = self.superview.space(subviews: self.subviews, alongAxis: .Vertical, withPadding: self.kSpaceDefault)
+                expect(constraints.count).to(equal(self.subviews.count-1))
+
+                var constraint = constraints[0]
+                expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Bottom))
+                expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Top))
+                expect(constraint.constant).to(equal(self.kSpaceDefault))
+                expect(constraint.active).to(equal(true))
+
+                constraint = constraints[1]
+                expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Bottom))
+                expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Top))
+                expect(constraint.constant).to(equal(self.kSpaceDefault))
+                expect(constraint.active).to(equal(true))
+
+                constraint = constraints[2]
+                expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Bottom))
+                expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Top))
                 expect(constraint.constant).to(equal(self.kSpaceDefault))
                 expect(constraint.active).to(equal(true))
 
