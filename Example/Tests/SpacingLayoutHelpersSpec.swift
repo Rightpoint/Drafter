@@ -47,20 +47,20 @@ class SpacingLayoutHelpersSpec: QuickSpec {
                 expect(constraints.count).to(equal(self.subviews.count-1))
 
                 var constraint = constraints[0]
-                expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Right))
-                expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Left))
+                expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Left))
+                expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Right))
                 expect(constraint.constant).to(equal(self.kSpaceDefault))
                 expect(constraint.active).to(equal(true))
 
                 constraint = constraints[1]
-                expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Right))
-                expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Left))
+                expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Left))
+                expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Right))
                 expect(constraint.constant).to(equal(self.kSpaceDefault))
                 expect(constraint.active).to(equal(true))
 
                 constraint = constraints[2]
-                expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Right))
-                expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Left))
+                expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Left))
+                expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Right))
                 expect(constraint.constant).to(equal(self.kSpaceDefault))
                 expect(constraint.active).to(equal(true))
             })

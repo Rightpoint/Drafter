@@ -44,8 +44,8 @@ class AttachmentLayoutHelpersSpec: QuickSpec {
         describe("Adding Tests") {
             it("adds top correct constraint", closure: {
                 let constraint = self.view.attachTop(toBottomOfView: self.view2, withPadding: self.kSpaceDefault)
-                expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Bottom))
-                expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Top))
+                expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Top))
+                expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Bottom))
                 expect(constraint.constant).to(equal(self.kSpaceDefault))
                 expect(constraint.active).to(equal(true))
                 expect(self.view.translatesAutoresizingMaskIntoConstraints).to(equal(false))
@@ -54,8 +54,8 @@ class AttachmentLayoutHelpersSpec: QuickSpec {
 
             it("adds left correct constraint", closure: {
                 let constraint = self.view.attachLeft(toRightOfView: self.view2, withPadding: self.kSpaceDefault)
-                expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Right))
-                expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Left))
+                expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Left))
+                expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Right))
                 expect(constraint.constant).to(equal(self.kSpaceDefault))
                 expect(constraint.active).to(equal(true))
                 expect(self.view.translatesAutoresizingMaskIntoConstraints).to(equal(false))
@@ -64,8 +64,8 @@ class AttachmentLayoutHelpersSpec: QuickSpec {
 
             it("adds bottom correct constraint", closure: {
                 let constraint = self.view.attachBottom(toTopOfView: self.view2, withPadding: self.kSpaceDefault)
-                expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Bottom))
-                expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Top))
+                expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Top))
+                expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Bottom))
                 expect(constraint.constant).to(equal(self.kSpaceDefault))
                 expect(constraint.active).to(equal(true))
                 expect(self.view.translatesAutoresizingMaskIntoConstraints).to(equal(false))
@@ -74,8 +74,8 @@ class AttachmentLayoutHelpersSpec: QuickSpec {
 
             it("adds right correct constraint", closure: {
                 let constraint = self.view.attachRight(toLeftOfView: self.view2, withPadding: self.kSpaceDefault)
-                expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Right))
-                expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Left))
+                expect(constraint.firstAttribute).to(equal(NSLayoutAttribute.Left))
+                expect(constraint.secondAttribute).to(equal(NSLayoutAttribute.Right))
                 expect(constraint.constant).to(equal(self.kSpaceDefault))
                 expect(constraint.active).to(equal(true))
                 expect(self.view.translatesAutoresizingMaskIntoConstraints).to(equal(false))
@@ -92,8 +92,8 @@ class AttachmentLayoutHelpersSpec: QuickSpec {
                 self.superview.setNeedsLayout()
                 self.superview.layoutIfNeeded()
 
-                let xDiff: CGFloat = CGRectGetMaxX(self.view.frame) - CGRectGetMinX(self.view2.frame)
-                let yDiff: CGFloat = CGRectGetMaxY(self.view.frame) - CGRectGetMinY(self.view2.frame)
+                let xDiff: CGFloat = CGRectGetMinX(self.view2.frame) - CGRectGetMaxX(self.view.frame)
+                let yDiff: CGFloat = CGRectGetMinY(self.view2.frame) - CGRectGetMaxY(self.view.frame)
                 expect(xDiff).to(equal(self.kSpaceDefault))
                 expect(yDiff).to(equal(self.kSpaceDefault))
             })
@@ -106,8 +106,8 @@ class AttachmentLayoutHelpersSpec: QuickSpec {
                 self.superview.setNeedsLayout()
                 self.superview.layoutIfNeeded()
 
-                let xDiff: CGFloat = CGRectGetMaxX(self.view2.frame) - CGRectGetMinX(self.view.frame)
-                let yDiff: CGFloat = CGRectGetMaxY(self.view2.frame) - CGRectGetMinY(self.view.frame)
+                let xDiff: CGFloat = CGRectGetMinX(self.view.frame) - CGRectGetMaxX(self.view2.frame)
+                let yDiff: CGFloat = CGRectGetMinY(self.view.frame) - CGRectGetMaxY(self.view2.frame)
                 expect(xDiff).to(equal(self.kSpaceDefault))
                 expect(yDiff).to(equal(self.kSpaceDefault))
             })
