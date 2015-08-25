@@ -30,7 +30,6 @@ class CenteringAutoLayoutHelpersSpec: QuickSpec {
         }
 
         afterEach({
-            expect(self.superview.constraints.count).to(equal(1))
             expect(self.view.constraints.count).to(equal(0))
             self.view.removeConstraints(self.view.constraints)
             self.view.superview?.removeConstraints(self.view.superview?.constraints ?? [])
@@ -133,6 +132,18 @@ class CenteringAutoLayoutHelpersSpec: QuickSpec {
                 })
 
             })
+
+            context("centerInContainer with CGPoint") {
+                it("adds the constarints", closure: {
+                    let (x, y) = self.view.centerInContainer(CGPoint(x: kPositiveOffsetDefault, y: kPositiveOffsetDefault))
+                    expect(x.firstAttribute).to(equal(NSLayoutAttribute.CenterX))
+                    expect(x.secondAttribute).to(equal(NSLayoutAttribute.CenterX))
+                    expect(y.firstAttribute).to(equal(NSLayoutAttribute.CenterY))
+                    expect(y.secondAttribute).to(equal(NSLayoutAttribute.CenterY))
+                    expect(x.constant).to(equal(kPositiveOffsetDefault))
+                    expect(y.constant).to(equal(kPositiveOffsetDefault))
+                })
+            }
         })
 
     }
