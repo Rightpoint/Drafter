@@ -12,6 +12,7 @@ public extension UIView {
     func space(subviews subviews: [UIView],
         alongAxis axis: UILayoutConstraintAxis,
         withPadding padding: CGFloat = 0.0,
+        positiveDirection positive: Bool = true,
         isActive active: Bool = true,
         priority: UILayoutPriority = UILayoutPriorityRequired,
         relation: NSLayoutRelation = .Equal) -> [NSLayoutConstraint] {
@@ -21,10 +22,21 @@ public extension UIView {
                 let view2 = subviews[i]
                 var constraint: NSLayoutConstraint
                 if axis == .Horizontal {
-                    constraint = view.attachRight(toLeftOfView: view2, withPadding: padding, isActive: false, priority: priority, relation: relation)
+                    if positive {
+                        constraint = view.attachRight(toLeftOfView: view2, withPadding: padding, isActive: false, priority: priority, relation: relation)
+                    }
+                    else {
+                        constraint = view2.attachLeft(toRightOfView: view, withPadding: padding, isActive: false, priority: priority, relation: relation)
+                    }
+
                 }
                 else {
-                    constraint = view.attachBottom(toTopOfView: view2, withPadding: padding, isActive: false, priority: priority, relation: relation)
+                    if positive {
+                        constraint = view.attachBottom(toTopOfView: view2, withPadding: padding, isActive: false, priority: priority, relation: relation)
+                    }
+                    else {
+                        constraint = view2.attachTop(toBottomOfView: view, withPadding: padding, isActive: false, priority: priority, relation: relation)
+                    }
                 }
 
                 constraints.append(constraint)

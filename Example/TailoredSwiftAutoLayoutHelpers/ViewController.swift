@@ -11,49 +11,100 @@ import TailoredSwiftAutoLayoutHelpers
 
 class ViewController: UIViewController {
 
-    let kSize: CGSize = CGSize(width: 20, height: 20)
-    let v = UIView()
-    let v2 = UIView()
-    let firstView = UIView()
-    let lastView = UIView()
-    let kSpace: CGFloat = 5.0
-    var spacingSubviews: [UIView]
+    let kSize: CGSize = CGSize(width: 40.0, height: 40.0)
+    let kInsets: UIEdgeInsets = UIEdgeInsets(top: 20.0, left: 20.0, bottom: 20.0, right: 20.0)
+    let kSpace: CGFloat = 8.0
+    let kOffset: CGFloat = 100.0
+
+    // fill (pins)
+    let fillView = UIView()
+
+    // center
+    let centerView = UIView()
+
+    // attach and align
+    let right = UIView()
+    let left = UIView()
+    let top = UIView()
+    let bottom = UIView()
+
+    // space and mass align
+    let firstHorizontalSpaceView = UIView()
+    let spacingHorizontalSubviews: [UIView]
+
+    let firstVerticalSpaceView = UIView()
+    let spacingVerticalSubviews: [UIView]
+
+
 
     required init?(coder aDecoder: NSCoder) {
-        spacingSubviews = [firstView, UIView(), UIView(), lastView]
+        spacingHorizontalSubviews = [firstHorizontalSpaceView, UIView(), UIView(), UIView()]
+        spacingVerticalSubviews = [firstVerticalSpaceView, UIView(), UIView(), UIView()]
         super.init(coder: aDecoder)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // pinned
-        view.addSubview(v)
-        v.backgroundColor = UIColor.redColor()
-        v.fillContainer(UIEdgeInsetsMake(20, 20, 20, 20))
+        // fill
+        view.addSubview(fillView)
+        fillView.backgroundColor = UIColor.redColor()
+        fillView.fillContainer(kInsets)
 
-        view.addSubview(v2)
-        v2.backgroundColor = UIColor.yellowColor()
-        v2.pinSize(toSize: kSize)
-        v2.attachLeft(toRightOfView: v, withPadding: kSpace)
-        v2.pinTopSpaceToSuperview() 
-//        v2.attachTop(toBottomOfView: v, withPadding: kSpace)
-//        v2.pinLeftSpaceToSuperview()
+        // center
+        fillView.addSubview(centerView)
+        centerView.pinSize(toSize: kSize)
+        centerView.backgroundColor = UIColor.greenColor()
+        centerView.centerInContainer()
 
-        // space
-        for view in spacingSubviews {
+        // attach and align
+        fillView.addSubview(bottom)
+        bottom.pinSize(toSize: kSize)
+        bottom.backgroundColor = UIColor.purpleColor()
+        bottom.alignRight(toRightOfView: centerView)
+        bottom.attachTop(toBottomOfView: centerView, withPadding: kSpace)
+
+        fillView.addSubview(top)
+        top.pinSize(toSize: kSize)
+        top.backgroundColor = UIColor.purpleColor()
+        top.alignLeft(toLeftOfView: centerView)
+        top.attachBottom(toTopOfView: centerView, withPadding: kSpace)
+
+        fillView.addSubview(left)
+        left.pinSize(toSize: kSize)
+        left.backgroundColor = UIColor.purpleColor()
+        left.alignBottom(toBottomOfView: centerView)
+        left.attachRight(toLeftOfView: centerView, withPadding: kSpace)
+
+        fillView.addSubview(right)
+        right.pinSize(toSize: kSize)
+        right.backgroundColor = UIColor.purpleColor()
+        right.alignTop(toTopOfView: centerView)
+        right.attachLeft(toRightOfView: centerView, withPadding: kSpace)
+
+        // Horizontal space and mass align
+        for view in spacingHorizontalSubviews {
             view.pinSize(toSize: kSize)
             view.backgroundColor = UIColor.blueColor()
-            v.addSubview(view)
+            fillView.addSubview(view)
             view.pinTopSpaceToSuperview(withPadding: kSpace)
         }
-
-        firstView.pinLeftSpaceToSuperview()
-        v.space(subviews: spacingSubviews,
+        firstHorizontalSpaceView.pinLeftSpaceToSuperview(withPadding: kSpace)
+        fillView.space(subviews: spacingHorizontalSubviews,
             alongAxis: UILayoutConstraintAxis.Horizontal,
             withPadding: kSpace)
 
-
+        // Vertical space and mass align
+        for view in spacingVerticalSubviews {
+            view.pinSize(toSize: kSize)
+            view.backgroundColor = UIColor.blueColor()
+            fillView.addSubview(view)
+            view.pinRightSpaceToSuperview(withPadding: kSpace)
+        }
+        firstVerticalSpaceView.pinBottomSpaceToSuperview(withPadding: kSpace)
+        fillView.space(subviews: spacingVerticalSubviews,
+            alongAxis: UILayoutConstraintAxis.Vertical,
+            withPadding: kSpace)
     }
 }
 

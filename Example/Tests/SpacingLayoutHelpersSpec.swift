@@ -125,8 +125,8 @@ class SpacingLayoutHelpersSpec: QuickSpec {
                 for var i = 0; i <  self.subviews.count - 1; i++ {
                     let view = self.subviews[i]
                     let view2 = self.subviews[i+1]
-                    let xDiff: CGFloat = CGRectGetMinY(view2.frame) - CGRectGetMaxY(view.frame)
-                    expect(xDiff).to(equal(self.kSpaceDefault))
+                    let yDiff: CGFloat = CGRectGetMinY(view2.frame) - CGRectGetMaxY(view.frame)
+                    expect(yDiff).to(equal(self.kSpaceDefault))
                 }
             })
         }
