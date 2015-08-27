@@ -8,6 +8,12 @@
 
 import UIKit
 
+public typealias EdgeInsetConstraints =
+    (top: NSLayoutConstraint,
+    left: NSLayoutConstraint,
+    bottom: NSLayoutConstraint,
+    right: NSLayoutConstraint)
+
 public extension UIView {
 
     // MARK: Public Interface
@@ -41,19 +47,21 @@ public extension UIView {
 
     public func fillContainer(insets: UIEdgeInsets = UIEdgeInsetsZero,
         isActive active: Bool = true,
-        priority: UILayoutPriority = UILayoutPriorityRequired) -> [NSLayoutConstraint]
+        priority: UILayoutPriority = UILayoutPriorityRequired) -> EdgeInsetConstraints
     {
-            let constraints: [NSLayoutConstraint] = [
-                pinTopSpaceToSuperview(isActive: false, withPadding: insets.top),
-                pinLeftSpaceToSuperview(isActive: false, withPadding: insets.left),
-                pinBottomSpaceToSuperview(isActive: false, withPadding: insets.bottom),
-                pinRightSpaceToSuperview(isActive: false, withPadding: insets.right)
-            ]
-            (constraints as NSArray).setValue(priority, forKey: "priority")
-            if active {
-                NSLayoutConstraint.activateConstraints(constraints)
-            }
-            return constraints
+        let top = pinTopSpaceToSuperview(isActive: false, withPadding: insets.top)
+        let left = pinLeftSpaceToSuperview(isActive: false, withPadding: insets.left)
+        let bottom = pinBottomSpaceToSuperview(isActive: false, withPadding: insets.bottom)
+        let right = pinRightSpaceToSuperview(isActive: false, withPadding: insets.right)
+        let constraints = [top, left, right, bottom]
+
+        (constraints as NSArray).setValue(priority, forKey: "priority")
+
+        if active {
+            NSLayoutConstraint.activateConstraints(constraints)
+        }
+
+        return (top: top, left: left, bottom: bottom, right: right)
     }
 
     // Getters

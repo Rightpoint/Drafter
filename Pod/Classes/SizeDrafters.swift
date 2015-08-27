@@ -22,13 +22,16 @@ public extension UIView {
     }
 
     func pinSize(toSize size: CGSize,
+        isActive active: Bool = true,
         priority: UILayoutPriority = UILayoutPriorityRequired) -> [NSLayoutConstraint] {
             let constraints = [
                 pinHeight(isActive: false, toView: nil, height: size.height),
                 pinWidth(isActive: false, toView: nil, width: size.width)
             ]
             (constraints as NSArray).setValue(priority, forKey: "priority")
-            NSLayoutConstraint.activateConstraints(constraints)
+            if active {
+                NSLayoutConstraint.activateConstraints(constraints)
+            }
             return constraints
     }
 
