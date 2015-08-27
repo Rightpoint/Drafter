@@ -9,13 +9,16 @@
 import UIKit
 import Drafter
 
+// MARK: Constants
+
+let kSize: CGSize = CGSize(width: 50.0, height: 50.0)
+let kInsets: UIEdgeInsets = UIEdgeInsets(top: 20.0, left: 20.0, bottom: 20.0, right: 20.0)
+let kSpace: CGFloat = 8.0
+let kOffset: CGFloat = 100.0
+
 class ViewController: UIViewController {
 
-    let kSize: CGSize = CGSize(width: 50.0, height: 50.0)
-    let kInsets: UIEdgeInsets = UIEdgeInsets(top: 20.0, left: 20.0, bottom: 20.0, right: 20.0)
-    let kSpace: CGFloat = 8.0
-    let kOffset: CGFloat = 100.0
-
+    // MARK: Variables
     // fill (pins)
     let fillView = UIView()
 
@@ -35,7 +38,7 @@ class ViewController: UIViewController {
     let firstVerticalSpaceView = UIView()
     let spacingVerticalSubviews: [UIView]
 
-
+    // MARK: Lifecycle
 
     required init?(coder aDecoder: NSCoder) {
         spacingHorizontalSubviews = [firstHorizontalSpaceView, UIView(), UIView(), UIView()]
@@ -46,18 +49,32 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // fill
+        fill()
+        center()
+        attachAndAlignAroundCenter()
+        horizontalSpaceAndMassAlignTop()
+        verticalSpaceAndMassAlignRight()
+    }
+
+    // MARK: Types of layouts
+
+    func fill()
+    {
         view.addSubview(fillView)
         fillView.backgroundColor = UIColor.redColor()
         fillView.fillContainer(kInsets)
+    }
 
-        // center
+    func center()
+    {
         fillView.addSubview(centerView)
         centerView.pinSize(toSize: kSize)
         centerView.backgroundColor = UIColor.greenColor()
         centerView.centerInContainer()
+    }
 
-        // attach and align
+    func attachAndAlignAroundCenter()
+    {
         fillView.addSubview(bottom)
         bottom.pinSize(toSize: kSize)
         bottom.backgroundColor = UIColor.purpleColor()
@@ -81,8 +98,10 @@ class ViewController: UIViewController {
         right.backgroundColor = UIColor.purpleColor()
         right.alignTop(toTopOfView: centerView)
         right.attachLeft(toRightOfView: centerView, withPadding: kSpace)
+    }
 
-        // Horizontal space and mass align
+    func horizontalSpaceAndMassAlignTop()
+    {
         for view in spacingHorizontalSubviews {
             view.pinSize(toSize: kSize)
             view.backgroundColor = UIColor.blueColor()
@@ -95,9 +114,10 @@ class ViewController: UIViewController {
             withPadding: kSpace)
         fillView.align(subviews: spacingHorizontalSubviews,
             attribute: .Top)
+    }
 
-
-        // Vertical space and mass align
+    func verticalSpaceAndMassAlignRight()
+    {
         for view in spacingVerticalSubviews {
             view.pinSize(toSize: kSize)
             view.backgroundColor = UIColor.blueColor()
@@ -113,4 +133,3 @@ class ViewController: UIViewController {
             attribute: .Right)
     }
 }
-
