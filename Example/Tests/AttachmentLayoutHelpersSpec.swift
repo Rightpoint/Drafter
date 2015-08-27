@@ -1,6 +1,6 @@
 //
 //  AttachmentLayoutHelpersSpec.swift
-//  TailoredSwiftAutoLayoutHelpers
+//  Drafter
 //
 //  Created by Derek Ostrander on 8/15/15.
 //  Copyright © 2015 CocoaPods. All rights reserved.
@@ -9,7 +9,7 @@
 
 import Quick
 import Nimble
-import TailoredSwiftAutoLayoutHelpers
+import Drafter
 
 class AttachmentLayoutHelpersSpec: QuickSpec {
 

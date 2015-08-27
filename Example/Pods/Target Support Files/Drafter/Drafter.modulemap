@@ -1,0 +1,6 @@
+framework module Drafter {
+  umbrella header "Drafter-umbrella.h"
+
+  export *
+  module * { export * }
+}
