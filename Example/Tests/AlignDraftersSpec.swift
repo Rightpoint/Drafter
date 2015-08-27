@@ -1,5 +1,5 @@
 //
-//  AlignLayoutHelpersSpec.swift
+//  AlignDraftersSpec.swift
 //  Drafter
 //
 //  Created by Derek Ostrander on 8/25/15.
@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import Drafter
 
-class AlignLayoutHelpersSpec: QuickSpec {
+class AlignDraftersSpec: QuickSpec {
 
     let superview = UIView()
     let view = UIView()
@@ -40,7 +40,7 @@ class AlignLayoutHelpersSpec: QuickSpec {
             self.view2.removeConstraints(self.view2.constraints)
         })
 
-        describe("AlignLayoutHelpersSpec") {
+        describe("AlignDraftersSpec") {
             context("align left of views") {
                 beforeEach({
                     self.view.centerInContainer()

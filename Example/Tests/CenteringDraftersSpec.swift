@@ -1,5 +1,5 @@
 //
-//  CenteringAutoLayoutHelpers.swift
+//  CenteringDrafters.swift
 //  Drafter
 //
 //  Created by Matthew Buckley on 8/14/15.
@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import Drafter
 
-class CenteringAutoLayoutHelpersSpec: QuickSpec {
+class CenteringDraftersSpec: QuickSpec {
 
     let superview = UIView()
     let view: UIView = UIView()
@@ -35,7 +35,7 @@ class CenteringAutoLayoutHelpersSpec: QuickSpec {
             self.view.superview?.removeConstraints(self.view.superview?.constraints ?? [])
         })
 
-        describe("CenteringAutoLayoutHelpers", {
+        describe("CenteringDrafters", {
 
             context("centerInContainer along horizontal axis", {
 

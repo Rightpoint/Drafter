@@ -40,16 +40,20 @@ public extension UIView {
     }
 
     public func fillContainer(insets: UIEdgeInsets = UIEdgeInsetsZero,
-        priority: UILayoutPriority = UILayoutPriorityRequired) -> [NSLayoutConstraint] {
-        let constraints: [NSLayoutConstraint] = [
-            pinTopSpaceToSuperview(isActive: false, withPadding: insets.top),
-            pinLeftSpaceToSuperview(isActive: false, withPadding: insets.left),
-            pinBottomSpaceToSuperview(isActive: false, withPadding: insets.bottom),
-            pinRightSpaceToSuperview(isActive: false, withPadding: insets.right)
-        ]
-        (constraints as NSArray).setValue(priority, forKey: "priority")
-        NSLayoutConstraint.activateConstraints(constraints)
-        return constraints
+        isActive active: Bool = true,
+        priority: UILayoutPriority = UILayoutPriorityRequired) -> [NSLayoutConstraint]
+    {
+            let constraints: [NSLayoutConstraint] = [
+                pinTopSpaceToSuperview(isActive: false, withPadding: insets.top),
+                pinLeftSpaceToSuperview(isActive: false, withPadding: insets.left),
+                pinBottomSpaceToSuperview(isActive: false, withPadding: insets.bottom),
+                pinRightSpaceToSuperview(isActive: false, withPadding: insets.right)
+            ]
+            (constraints as NSArray).setValue(priority, forKey: "priority")
+            if active {
+                NSLayoutConstraint.activateConstraints(constraints)
+            }
+            return constraints
     }
 
     // Getters

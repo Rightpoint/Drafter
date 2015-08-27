@@ -4,7 +4,7 @@ import Quick
 import Nimble
 import Drafter
 
-class SizeAutoLayoutHelpersSpec: QuickSpec {
+class SizeDraftersSpec: QuickSpec {
 
     let view: UIView = UIView()
     let kTestOffsetDefault: CGFloat = 20.0
@@ -19,7 +19,7 @@ class SizeAutoLayoutHelpersSpec: QuickSpec {
             self.view.removeConstraints(self.view.constraints)
         })
         
-        describe("SizeAutoLayoutHelpers") {
+        describe("SizeDrafters") {
 
             context("pinHeight", {
 

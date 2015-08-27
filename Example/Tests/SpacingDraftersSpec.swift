@@ -1,5 +1,5 @@
 //
-//  SpacingLayoutHelpers.swift
+//  SpacingDrafters.swift
 //  Drafter
 //
 //  Created by Derek Ostrander on 8/23/15.
@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import Drafter
 
-class SpacingLayoutHelpersSpec: QuickSpec {
+class SpacingDraftersSpec: QuickSpec {
 
     let superview = UIView()
     let subviews = [UIView(), UIView(), UIView(), UIView()]

@@ -1,5 +1,5 @@
 //
-//  AttachmentLayoutHelpersSpec.swift
+//  AttachmentDraftersSpec.swift
 //  Drafter
 //
 //  Created by Derek Ostrander on 8/15/15.
@@ -11,7 +11,7 @@ import Quick
 import Nimble
 import Drafter
 
-class AttachmentLayoutHelpersSpec: QuickSpec {
+class AttachmentDraftersSpec: QuickSpec {
 
     let superview = UIView()
     let view = UIView()

@@ -1,5 +1,5 @@
 //
-//  CreatorAutolayoutHelperSpec.swift
+//  CreatorDrafterspec.swift
 //  Drafter
 //
 //  Created by Derek Ostrander on 8/8/15.
@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import Drafter
 
-class CreatorAutolayoutHelpersSpec: QuickSpec {
+class CreatorDraftersSpec: QuickSpec {
 
     let superview: UIView = UIView()
     let view: UIView = UIView()
@@ -30,7 +30,7 @@ class CreatorAutolayoutHelpersSpec: QuickSpec {
             self.superview.removeConstraints(self.view.constraints)
         })
 
-        describe("CreatorAutoLayoutHelpers", {
+        describe("CreatorDrafters", {
 
             context("pinSideInactive", {
 

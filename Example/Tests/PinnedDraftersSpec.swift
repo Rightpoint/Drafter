@@ -1,5 +1,5 @@
 //
-//  PinnedAutoLayoutHelpersSpec.swift
+//  PinnedDraftersSpec.swift
 //  Drafter
 //
 //  Created by Matthew Buckley on 8/5/15.
@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import Drafter
 
-class PinnedAutoLayoutHelpersSpec: QuickSpec {
+class PinnedDraftersSpec: QuickSpec {
 
     let superview: UIView = UIView()
     let view: UIView = UIView()
@@ -33,7 +33,7 @@ class PinnedAutoLayoutHelpersSpec: QuickSpec {
             self.superview.removeConstraints(self.superview.constraints)
         })
 
-        describe("PinnedAutoLayoutHelpers", {
+        describe("PinnedDrafters", {
 
             context("fillContainer", {
 

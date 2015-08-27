@@ -1,5 +1,5 @@
 //
-//  CenteringAutoLayoutHelpers.swift
+//  CenteringDrafters.swift
 //  Pods
 //
 //  Created by Matthew Buckley on 8/14/15.
