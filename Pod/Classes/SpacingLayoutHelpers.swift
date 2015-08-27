@@ -21,28 +21,22 @@ public extension UIView {
                 let view = subviews[i-1]
                 let view2 = subviews[i]
                 var constraint: NSLayoutConstraint
-                if axis == .Horizontal {
-                    if positive {
-                        constraint = view.attachRight(toLeftOfView: view2, withPadding: padding, isActive: false, priority: priority, relation: relation)
-                    }
-                    else {
-                        constraint = view2.attachLeft(toRightOfView: view, withPadding: padding, isActive: false, priority: priority, relation: relation)
-                    }
 
-                }
-                else {
-                    if positive {
-                        constraint = view.attachBottom(toTopOfView: view2, withPadding: padding, isActive: false, priority: priority, relation: relation)
-                    }
-                    else {
-                        constraint = view2.attachTop(toBottomOfView: view, withPadding: padding, isActive: false, priority: priority, relation: relation)
-                    }
+                switch (axis, positive) {
+                case (.Horizontal, true):
+                    constraint = view.attachRight(toLeftOfView: view2, withPadding: padding, isActive: false, priority: priority, relation: relation)
+                case (.Horizontal, false):
+                    constraint = view.attachLeft(toRightOfView: view2, withPadding: padding, isActive: false, priority: priority, relation: relation)
+                case (.Vertical, true):
+                    constraint = view.attachBottom(toTopOfView: view2, withPadding: padding, isActive: false, priority: priority, relation: relation)
+                case (.Vertical, false):
+                    constraint = view.attachTop(toBottomOfView: view2, withPadding: padding, isActive: false, priority: priority, relation: relation)
                 }
 
                 constraints.append(constraint)
             }
 
-            if ( active ) {
+            if active {
                 NSLayoutConstraint.activateConstraints(constraints)
             }
             

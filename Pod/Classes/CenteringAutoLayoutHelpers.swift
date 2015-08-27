@@ -20,14 +20,14 @@ public extension UIView {
                 NSLayoutConstraint.activateConstraints([x,y])
             }
 
-            return (x, y)
+            return (x: x, y: y)
     }
 
     public func centerInContainer(forAxis axis:UILayoutConstraintAxis,
         offset: CGFloat = 0.0,
         isActive active: Bool = true,
         priority:UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
-            let constraint = centerInContainer(isActive: false, axis: axis, offset: offset).activate(priority)
+            let constraint = centerInContainer(isActive: false, axis: axis, offset: offset)
             constraint.priority = priority
             constraint.active = active
             return constraint

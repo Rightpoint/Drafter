@@ -8,7 +8,7 @@
 
 import UIKit
 
-internal extension UIView {
+extension UIView {
     func sizeConstraint(attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
         return constraints.find { (constraint: NSLayoutConstraint) -> (Bool) in
             let hasCorrectAttributes = self.attributeCheck(forAttribute: attribute)
