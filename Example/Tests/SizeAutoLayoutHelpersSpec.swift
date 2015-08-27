@@ -2,7 +2,7 @@
 
 import Quick
 import Nimble
-import TailoredSwiftAutoLayoutHelpers
+import Drafter
 
 class SizeAutoLayoutHelpersSpec: QuickSpec {
 

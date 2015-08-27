@@ -1,6 +1,6 @@
 //
 //  PinnedAutoLayoutHelpersSpec.swift
-//  TailoredSwiftAutoLayoutHelpers
+//  Drafter
 //
 //  Created by Matthew Buckley on 8/5/15.
 //  Copyright © 2015 CocoaPods. All rights reserved.
@@ -8,7 +8,7 @@
 
 import Quick
 import Nimble
-import TailoredSwiftAutoLayoutHelpers
+import Drafter
 
 class PinnedAutoLayoutHelpersSpec: QuickSpec {
 

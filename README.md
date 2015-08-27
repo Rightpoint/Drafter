@@ -1,9 +1,10 @@
 # Drafter
 
-<!--[![CI Status](http://img.shields.io/travis/mattThousand/Drafter.svg?style=flat)](https://travis-ci.org/mattThousand/TailoredSwiftAutoLayoutHelpers) -->
-[![Version](https://img.shields.io/cocoapods/v/Drafter.svg?style=flat)](http://cocoapods.org/pods/TailoredSwiftAutoLayoutHelpers)
-[![License](https://img.shields.io/cocoapods/l/Drafter.svg?style=flat)](http://cocoapods.org/pods/TailoredSwiftAutoLayoutHelpers)
-[![Platform](https://img.shields.io/cocoapods/p/Drafter.svg?style=flat)](http://cocoapods.org/pods/TailoredSwiftAutoLayoutHelpers)
+[![CI Status](http://img.shields.io/travis/mattThousand/Drafter.svg?style=flat)](https://travis-ci.org/mattThousand/Drafter)
+[![Version](https://img.shields.io/cocoapods/v/Drafter.svg?style=flat)](http://cocoapods.org/pods/Drafter)
+[![License](https://img.shields.io/cocoapods/l/Drafter.svg?style=flat)](http://cocoapods.org/pods/Drafter)
+[![Platform](https://img.shields.io/cocoapods/p/Drafter.svg?style=flat)](http://cocoapods.org/pods/Drafter)
+
 
 Drafter is a set of simple wrapper calls around creating and accessing NSLayoutConstraints which makes it much less verbose when creating them progromatically. It allows for many of the common constraint creation operations to be expressed in a more concise way compared to the standard NSLayoutConstraint creation methods
 
@@ -51,12 +52,11 @@ For example pinning the view to the top left of it's superview would be:
 	
 Or to center  
 
-	view.centerInContainer
+	view.centerInContainer()
 
 
 
-## Authors
-
+## Authors  
 
 github: [@mattThousand](https://github.com/mattThousand), email: [matt.d.buckley1212@gmail.com](mailto:matt.d.buckley1212@gmail.com), twitter: [@mattThousand](https://twitter.com/mattThousand)  
 github: [@dostrander](https://github.com/dostrander), email: [djostran@gmail.com](mailto:djostran@gmail.com), twitter:  [@_derko](https://twitter.com/_derko)  
