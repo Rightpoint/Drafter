@@ -11,7 +11,7 @@ import TailoredSwiftAutoLayoutHelpers
 
 class ViewController: UIViewController {
 
-    let kSize: CGSize = CGSize(width: 40.0, height: 40.0)
+    let kSize: CGSize = CGSize(width: 50.0, height: 50.0)
     let kInsets: UIEdgeInsets = UIEdgeInsets(top: 20.0, left: 20.0, bottom: 20.0, right: 20.0)
     let kSpace: CGFloat = 8.0
     let kOffset: CGFloat = 100.0
@@ -87,24 +87,30 @@ class ViewController: UIViewController {
             view.pinSize(toSize: kSize)
             view.backgroundColor = UIColor.blueColor()
             fillView.addSubview(view)
-            view.pinTopSpaceToSuperview(withPadding: kSpace)
         }
+        firstHorizontalSpaceView.pinTopSpaceToSuperview(withPadding: kSpace)
         firstHorizontalSpaceView.pinLeftSpaceToSuperview(withPadding: kSpace)
         fillView.space(subviews: spacingHorizontalSubviews,
             alongAxis: UILayoutConstraintAxis.Horizontal,
             withPadding: kSpace)
+        fillView.align(subviews: spacingHorizontalSubviews,
+            attribute: .Top)
+
 
         // Vertical space and mass align
         for view in spacingVerticalSubviews {
             view.pinSize(toSize: kSize)
             view.backgroundColor = UIColor.blueColor()
             fillView.addSubview(view)
-            view.pinRightSpaceToSuperview(withPadding: kSpace)
         }
         firstVerticalSpaceView.pinBottomSpaceToSuperview(withPadding: kSpace)
+        firstVerticalSpaceView.pinRightSpaceToSuperview(withPadding: kSpace)
         fillView.space(subviews: spacingVerticalSubviews,
             alongAxis: UILayoutConstraintAxis.Vertical,
-            withPadding: kSpace)
+            withPadding: kSpace,
+            positiveDirection: false)
+        fillView.align(subviews: spacingVerticalSubviews,
+            attribute: .Right)
     }
 }
 
