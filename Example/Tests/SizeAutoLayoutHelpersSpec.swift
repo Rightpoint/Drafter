@@ -58,7 +58,8 @@ class SizeAutoLayoutHelpersSpec: QuickSpec {
                 })
 
                 it("adds constraints with low priority", closure: {
-                    self.view.pinWidth(toWidth: self.kTestOffsetDefault, priority: UILayoutPriorityDefaultLow)
+                    self.view.pinWidth(toWidth: self.kTestOffsetDefault,
+                        priority: UILayoutPriorityDefaultLow)
 
                     expect(self.view.constraints).toNot(beEmpty())
 

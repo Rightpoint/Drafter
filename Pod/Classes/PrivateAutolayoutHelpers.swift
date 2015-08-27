@@ -12,7 +12,8 @@ let kSuperviewErrorMessage = "Must have superview"
 let kViewHierarchyMessage = "Must be in the same view hierarchy"
 
 extension Array {
-    func find(f: (Element) -> (Bool)) -> Element? {
+    func find(f: (Element) -> (Bool)) -> Element?
+    {
         guard let index = self.indexOf(f) else {
             return nil
         }
@@ -23,7 +24,7 @@ extension Array {
 extension NSLayoutConstraint {
     var firstObject: NSObject {
         get {
-            return self.firstItem as! NSObject
+            return (self.firstItem as? NSObject)!
         }
     }
 
@@ -38,43 +39,73 @@ extension NSLayoutConstraint {
 }
 
 extension UIView {
-    func attributeCheck(forAttribute attribute: NSLayoutAttribute) -> (NSLayoutConstraint -> Bool) {
+
+    func attributeCheck(forAttribute attribute: NSLayoutAttribute) -> (NSLayoutConstraint -> Bool)
+    {
         let attributeCheck: (NSLayoutConstraint -> Bool)
-        switch attribute {
+        switch attribute
+        {
+        case .Top, .Bottom, .CenterX, .CenterY,
+        .TopMargin, .BottomMargin, .CenterXWithinMargins, .CenterYWithinMargins:
+            attributeCheck = { $0.firstAttribute == attribute && $0.secondAttribute == attribute }
         case .Left, .Leading:
-            attributeCheck = {(constraint: NSLayoutConstraint) -> Bool in
-                return (constraint.firstAttribute == .Left || constraint.firstAttribute == .Leading) && (constraint.secondAttribute == .Left || constraint.secondAttribute == .Leading)
-            }
+            attributeCheck = leftAttributeCheck()
         case .Right, .Trailing:
-            attributeCheck = {(constraint: NSLayoutConstraint) -> Bool in
-                return (constraint.firstAttribute == .Right || constraint.firstAttribute == .Trailing) && (constraint.secondAttribute == .Right || constraint.secondAttribute == .Trailing)
-            }
+            attributeCheck = rightAttributeCheck()
         case .LeftMargin, .LeadingMargin:
-            attributeCheck = {(constraint: NSLayoutConstraint) -> Bool in
-                return (constraint.firstAttribute == .LeftMargin || constraint.firstAttribute == .LeadingMargin) && (constraint.secondAttribute == .LeftMargin || constraint.secondAttribute == .LeadingMargin)
-            }
+            attributeCheck = leftMarginAttributeCheck()
         case .RightMargin, .TrailingMargin:
-            attributeCheck = {(constraint: NSLayoutConstraint) -> Bool in
-                return (constraint.firstAttribute == .RightMargin || constraint.firstAttribute == .TrailingMargin) && (constraint.secondAttribute == .RightMargin || constraint.secondAttribute == .TrailingMargin)
-            }
-
-            // Size
-        case .Width:
-            attributeCheck = { return $0.firstAttribute == .Width && $0.secondAttribute == .NotAnAttribute }
-        case .Height:
-            attributeCheck = { return $0.firstAttribute == .Height && $0.secondAttribute == .NotAnAttribute }
-
-            // Normal
-        case .Top, .Bottom, .CenterX, .CenterY, .TopMargin, .BottomMargin, .CenterXWithinMargins, .CenterYWithinMargins:
-            attributeCheck = { return $0.firstAttribute == attribute && $0.secondAttribute == attribute }
-
+            attributeCheck =  rightMarginAttributeCheck()
+        case .Width, .Height:
+            attributeCheck = sizeAttributeCheck(attribute)
         default: // Break in case
             attributeCheck = { _ -> Bool in
                 assert(false, "Shouldn't get here")
                 return false
             }
         }
-        
         return attributeCheck
     }
+
+    // left
+    private func leftAttributeCheck() -> (NSLayoutConstraint -> Bool)
+    {
+        return { (c: NSLayoutConstraint) -> Bool in
+            (c.firstAttribute == .Left || c.firstAttribute == .Leading) &&
+                (c.secondAttribute == .Left || c.secondAttribute == .Leading)
+        }
+    }
+
+    private func leftMarginAttributeCheck() -> (NSLayoutConstraint -> Bool)
+    {
+        return { (c: NSLayoutConstraint) -> Bool in
+            (c.firstAttribute == .LeftMargin || c.firstAttribute == .LeadingMargin) &&
+                (c.secondAttribute == .LeftMargin || c.secondAttribute == .LeadingMargin)
+        }
+    }
+
+    // right
+    private func rightAttributeCheck() -> (NSLayoutConstraint -> Bool)
+    {
+        return { (c: NSLayoutConstraint) -> Bool in
+            (c.firstAttribute == .Right || c.firstAttribute == .Trailing) &&
+                (c.secondAttribute == .Right || c.secondAttribute == .Trailing)
+        }
+    }
+
+    private func rightMarginAttributeCheck() -> (NSLayoutConstraint -> Bool)
+    {
+        return { (c: NSLayoutConstraint) -> Bool in
+            (c.firstAttribute == .RightMargin || c.firstAttribute == .TrailingMargin) &&
+                (c.secondAttribute == .RightMargin || c.secondAttribute == .TrailingMargin)
+        }
+    }
+
+    private func sizeAttributeCheck(attribute: NSLayoutAttribute) -> (NSLayoutConstraint -> Bool)
+    {
+        return {
+            $0.firstAttribute == attribute && $0.secondAttribute == .NotAnAttribute
+        }
+    }
+
 }

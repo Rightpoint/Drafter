@@ -9,7 +9,8 @@
 import UIKit
 
 extension UIView {
-    func pinnedMinConstraint(attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
+    func pinnedMinConstraint(attribute: NSLayoutAttribute) -> NSLayoutConstraint?
+    {
         guard let s = superview else {
             return nil
         }
@@ -19,7 +20,8 @@ extension UIView {
         }
     }
 
-    func pinnedMaxConstraint(attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
+    func pinnedMaxConstraint(attribute: NSLayoutAttribute) -> NSLayoutConstraint?
+    {
         guard let s = superview else {
             return nil
         }
@@ -29,7 +31,8 @@ extension UIView {
         }
     }
 
-    func pinnedConstraint(attribute: NSLayoutAttribute) -> NSLayoutConstraint? {
+    func pinnedConstraint(attribute: NSLayoutAttribute) -> NSLayoutConstraint?
+    {
         guard let s = superview else {
             return nil
         }
@@ -39,12 +42,16 @@ extension UIView {
         }
     }
 
-    func pinSpaceToSuperview(attribute: NSLayoutAttribute, padding: CGFloat, active: Bool, priority: UILayoutPriority) -> NSLayoutConstraint
+    func pinSpaceToSuperview(attribute: NSLayoutAttribute,
+        padding: CGFloat,
+        active: Bool,
+        priority: UILayoutPriority) -> NSLayoutConstraint
     {
         guard let s = superview else {
             assert(false, kSuperviewErrorMessage)
         }
-        let isPositive = attribute != .Right && attribute != .Bottom && attribute != .RightMargin && attribute != .BottomMargin
+        let isPositive = attribute != .Right && attribute != .Bottom &&
+            attribute != .RightMargin && attribute != .BottomMargin
 
         translatesAutoresizingMaskIntoConstraints = false
 
@@ -62,15 +69,16 @@ extension UIView {
     }
 
     // MARK: Private
-    
     private func isPinnedConstraint(constraint: NSLayoutConstraint,
         attribute: NSLayoutAttribute,
-        relation: NSLayoutRelation) -> Bool {
+        relation: NSLayoutRelation) -> Bool
+    {
             guard let s = superview else {
                 return false
             }
 
-            let hasCorrectAttributes: (NSLayoutConstraint -> Bool) = attributeCheck(forAttribute: attribute)
-            return (constraint.firstObject == s || constraint.secondObject == s) && hasCorrectAttributes(constraint) && constraint.relation == relation
+            let hasCorrectAttributes = attributeCheck(forAttribute: attribute)
+            return (constraint.firstObject == s || constraint.secondObject == s) &&
+                hasCorrectAttributes(constraint) && constraint.relation == relation
     }
 }
