@@ -8,6 +8,6 @@ end
 target 'Drafter_Tests', :exclusive => true do
     pod "Drafter", :path => "../"
 
-    pod 'Quick', '~> 0.5.0'
+    pod 'Quick', '~> 0.6.0'
     pod 'Nimble', '2.0.0-rc.2'
 end
