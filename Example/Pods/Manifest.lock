@@ -1,20 +1,20 @@
 PODS:
   - Drafter (0.1.0)
   - Nimble (2.0.0-rc.2)
-  - Quick (0.5.1)
+  - Quick (0.6.0)
 
 DEPENDENCIES:
   - Drafter (from `../`)
   - Nimble (= 2.0.0-rc.2)
-  - Quick (~> 0.5.0)
+  - Quick (~> 0.6.0)
 
 EXTERNAL SOURCES:
   Drafter:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Drafter: 7e0e21d7a63f6cf4ff13e14d77720063da625df2
+  Drafter: 7736b2d0307ab4b9edb198d483670354aef7fd3d
   Nimble: e3cf5e73a491daf21c2bc88783dbfc55ce8b8e02
-  Quick: 7426537a99e75076d6930c5b6da58006e4a9f38a
+  Quick: 563686dbcf0ae0f9f7401ac9cd2d786ee1b7f3d7
 
 COCOAPODS: 0.38.2
