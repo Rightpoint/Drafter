@@ -48,7 +48,7 @@ extension UIView {
         priority: UILayoutPriority) -> NSLayoutConstraint
     {
         guard let s = superview else {
-            assert(false, kSuperviewErrorMessage)
+            fatalError(kSuperviewErrorMessage)
         }
         let isPositive = attribute != .Right && attribute != .Bottom &&
             attribute != .RightMargin && attribute != .BottomMargin

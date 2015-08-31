@@ -50,7 +50,7 @@ public extension UIView {
         translatesAutoresizingMaskIntoConstraints = false
 
         guard let s = superview else {
-            assert(false, kSuperviewErrorMessage)
+            fatalError(kSuperviewErrorMessage)
         }
         let axisAttribute: NSLayoutAttribute = axis == .Horizontal ? .CenterX : .CenterY
         let constraint = NSLayoutConstraint(

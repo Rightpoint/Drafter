@@ -8,6 +8,36 @@
 
 import UIKit
 
+func draftAttachBottom(ofView view: UIView, toTopOfView view2: UIView, padding: CGFloat, relation: NSLayoutRelation) -> NSLayoutConstraint {
+    guard let s = view.superview else {
+        fatalError(kSuperviewErrorMessage)
+    }
+    assert(view2.isDescendantOfView(s), kViewHierarchyMessage)
+    let constraint = NSLayoutConstraint(item: view,
+        attribute: .Top,
+        relatedBy: relation,
+        toItem: view2,
+        attribute: .Bottom,
+        multiplier: 1.0,
+        constant: padding)
+    return constraint
+}
+
+func draftAttachLeft(ofView view: UIView, toRightOfView view2: UIView, padding: CGFloat, relation: NSLayoutRelation) -> NSLayoutConstraint {
+    guard let s = view.superview else {
+        fatalError(kSuperviewErrorMessage)
+    }
+    assert(view2.isDescendantOfView(s), kViewHierarchyMessage)
+    let constraint = NSLayoutConstraint(item: view,
+        attribute: .Left,
+        relatedBy: relation,
+        toItem: view2,
+        attribute: .Right,
+        multiplier: 1.0,
+        constant: padding)
+    return constraint
+}
+
 public extension UIView {
     public func attachBottom(toTopOfView view: UIView,
         withPadding padding: CGFloat = 0.0,
@@ -15,17 +45,10 @@ public extension UIView {
         priority: UILayoutPriority = UILayoutPriorityRequired,
         relation: NSLayoutRelation = .Equal) -> NSLayoutConstraint
     {
-        guard let s = superview else {
-            assert(false, kSuperviewErrorMessage)
-        }
-        assert(view.isDescendantOfView(s), kViewHierarchyMessage)
-        let constraint = NSLayoutConstraint(item: view,
-            attribute: .Top,
-            relatedBy: relation,
-            toItem: self,
-            attribute: .Bottom,
-            multiplier: 1.0,
-            constant: padding)
+        let constraint = draftAttachBottom(ofView: view,
+            toTopOfView: self,
+            padding: padding,
+            relation: relation)
         constraint.priority = priority
         constraint.active = active
         return constraint
@@ -37,17 +60,10 @@ public extension UIView {
         priority: UILayoutPriority = UILayoutPriorityRequired,
         relation: NSLayoutRelation = .Equal) -> NSLayoutConstraint
     {
-        guard let s = superview else {
-            assert(false, kSuperviewErrorMessage)
-        }
-        assert(view.isDescendantOfView(s), kViewHierarchyMessage)
-        let constraint = NSLayoutConstraint(item: self,
-            attribute: .Top,
-            relatedBy: relation,
-            toItem: view,
-            attribute: .Bottom,
-            multiplier: 1.0,
-            constant: padding)
+        let constraint = draftAttachBottom(ofView: self,
+            toTopOfView: view,
+            padding: padding,
+            relation: relation)
         constraint.priority = priority
         constraint.active = active
         return constraint
@@ -59,17 +75,10 @@ public extension UIView {
         priority: UILayoutPriority = UILayoutPriorityRequired,
         relation: NSLayoutRelation = .Equal) -> NSLayoutConstraint
     {
-        guard let s = superview else {
-            assert(false, kSuperviewErrorMessage)
-        }
-        assert(view.isDescendantOfView(s), kViewHierarchyMessage)
-        let constraint = NSLayoutConstraint(item: view,
-            attribute: .Left,
-            relatedBy: relation,
-            toItem: self,
-            attribute: .Right,
-            multiplier: 1.0,
-            constant: padding)
+        let constraint = draftAttachLeft(ofView: view,
+            toRightOfView: self,
+            padding: padding,
+            relation: relation)
         constraint.priority = priority
         constraint.active = active
         return constraint
@@ -80,17 +89,10 @@ public extension UIView {
         priority: UILayoutPriority = UILayoutPriorityRequired,
         relation: NSLayoutRelation = .Equal) -> NSLayoutConstraint
     {
-        guard let s = superview else {
-            assert(false, kSuperviewErrorMessage)
-        }
-        assert(view.isDescendantOfView(s), kViewHierarchyMessage)
-        let constraint = NSLayoutConstraint(item: self,
-            attribute: .Left,
-            relatedBy: relation,
-            toItem: view,
-            attribute: .Right,
-            multiplier: 1.0,
-            constant: padding)
+        let constraint = draftAttachLeft(ofView: self,
+            toRightOfView: view,
+            padding: padding,
+            relation: relation)
         constraint.priority = priority
         constraint.active = active
         return constraint
