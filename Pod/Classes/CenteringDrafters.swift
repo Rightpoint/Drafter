@@ -13,7 +13,7 @@ public typealias PointConstraints = (x: NSLayoutConstraint, y: NSLayoutConstrain
 public extension UIView {
 
     // MARK: Public Interface
-    public func centerInContainer(offset: CGPoint = CGPoint.zeroPoint,
+    public func centerInContainer(offset: CGPoint = CGPoint.zero,
         isActive active: Bool = true,
         priority: UILayoutPriority = UILayoutPriorityRequired) -> PointConstraints
     {

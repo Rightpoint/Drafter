@@ -8,6 +8,6 @@ end
 target 'Drafter_Tests', :exclusive => true do
     pod "Drafter", :path => "../"
 
-    pod 'Quick', '~> 0.6.0'
-    pod 'Nimble', '2.0.0-rc.2'
+    pod 'Quick', :git => 'git@github.com:Quick/Quick.git', :branch => 'swift-2.0'
+    pod 'Nimble', :git => 'git@github.com:Quick/Nimble.git', :branch => 'swift-2.0'
 end
