@@ -4,6 +4,7 @@
 [![Version](https://img.shields.io/cocoapods/v/Drafter.svg?style=flat)](http://cocoapods.org/pods/Drafter)
 [![License](https://img.shields.io/cocoapods/l/Drafter.svg?style=flat)](http://cocoapods.org/pods/Drafter)
 [![Platform](https://img.shields.io/cocoapods/p/Drafter.svg?style=flat)](http://cocoapods.org/pods/Drafter)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Raizlabs/Drafter)
 
 
 Drafter is a set of simple wrapper calls around creating and accessing NSLayoutConstraints which makes it much less verbose when creating them progromatically. It allows for many of the common constraint creation operations to be expressed in a more concise way compared to the standard NSLayoutConstraint creation methods
@@ -18,6 +19,21 @@ it, simply add the following line to your Podfile:
 
 `pod "Drafter"`
 
+
+## Carthage
+
+Carthage is a decentralized dependency manager that automates the process of adding frameworks to your Cocoa application.
+
+You can install Carthage with Homebrew using the following command:
+
+```
+$ brew update
+$ brew install carthage
+```
+
+To integrate Drafter into your Xcode project using Carthage, specify it in your Cartfile:
+
+`github "Raizlabs/Drafter" >= 1.0`
 
 ## Usage
 
