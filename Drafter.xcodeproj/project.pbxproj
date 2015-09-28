@@ -7,134 +7,109 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B577609A1B9B39A900BCC655 /* Drafter.h in Headers */ = {isa = PBXBuildFile; fileRef = B57760991B9B39A900BCC655 /* Drafter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B57760A11B9B39A900BCC655 /* Drafter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B57760961B9B39A900BCC655 /* Drafter.framework */; settings = {ASSET_TAGS = (); }; };
-		B57760A61B9B39A900BCC655 /* DrafterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57760A51B9B39A900BCC655 /* DrafterTests.swift */; };
-		B57760B91B9B3A4800BCC655 /* AlignDrafters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57760B01B9B3A4800BCC655 /* AlignDrafters.swift */; settings = {ASSET_TAGS = (); }; };
-		B57760BA1B9B3A4800BCC655 /* AttachmentDrafters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57760B11B9B3A4800BCC655 /* AttachmentDrafters.swift */; settings = {ASSET_TAGS = (); }; };
-		B57760BB1B9B3A4800BCC655 /* CenteringDrafters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57760B21B9B3A4800BCC655 /* CenteringDrafters.swift */; settings = {ASSET_TAGS = (); }; };
-		B57760BC1B9B3A4800BCC655 /* PinnedDrafters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57760B31B9B3A4800BCC655 /* PinnedDrafters.swift */; settings = {ASSET_TAGS = (); }; };
-		B57760BD1B9B3A4800BCC655 /* PrivateDrafters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57760B41B9B3A4800BCC655 /* PrivateDrafters.swift */; settings = {ASSET_TAGS = (); }; };
-		B57760BE1B9B3A4800BCC655 /* PrivatePinnedDrafters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57760B51B9B3A4800BCC655 /* PrivatePinnedDrafters.swift */; settings = {ASSET_TAGS = (); }; };
-		B57760BF1B9B3A4800BCC655 /* PrivateSizeDrafters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57760B61B9B3A4800BCC655 /* PrivateSizeDrafters.swift */; settings = {ASSET_TAGS = (); }; };
-		B57760C01B9B3A4800BCC655 /* SizeDrafters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57760B71B9B3A4800BCC655 /* SizeDrafters.swift */; settings = {ASSET_TAGS = (); }; };
-		B57760C11B9B3A4800BCC655 /* SpacingDrafters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57760B81B9B3A4800BCC655 /* SpacingDrafters.swift */; settings = {ASSET_TAGS = (); }; };
+		B5425D4B1BB983C50056AA35 /* AlignDrafters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5425D401BB983C50056AA35 /* AlignDrafters.swift */; settings = {ASSET_TAGS = (); }; };
+		B5425D4C1BB983C50056AA35 /* AttachmentDrafters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5425D411BB983C50056AA35 /* AttachmentDrafters.swift */; settings = {ASSET_TAGS = (); }; };
+		B5425D4D1BB983C50056AA35 /* CenteringDrafters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5425D421BB983C50056AA35 /* CenteringDrafters.swift */; settings = {ASSET_TAGS = (); }; };
+		B5425D4E1BB983C50056AA35 /* Drafter.h in Headers */ = {isa = PBXBuildFile; fileRef = B5425D431BB983C50056AA35 /* Drafter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5425D501BB983C50056AA35 /* PinnedDrafters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5425D451BB983C50056AA35 /* PinnedDrafters.swift */; settings = {ASSET_TAGS = (); }; };
+		B5425D511BB983C50056AA35 /* PrivateDrafters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5425D461BB983C50056AA35 /* PrivateDrafters.swift */; settings = {ASSET_TAGS = (); }; };
+		B5425D521BB983C50056AA35 /* PrivatePinnedDrafters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5425D471BB983C50056AA35 /* PrivatePinnedDrafters.swift */; settings = {ASSET_TAGS = (); }; };
+		B5425D531BB983C50056AA35 /* PrivateSizeDrafters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5425D481BB983C50056AA35 /* PrivateSizeDrafters.swift */; settings = {ASSET_TAGS = (); }; };
+		B5425D541BB983C50056AA35 /* SizeDrafters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5425D491BB983C50056AA35 /* SizeDrafters.swift */; settings = {ASSET_TAGS = (); }; };
+		B5425D551BB983C50056AA35 /* SpacingDrafters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5425D4A1BB983C50056AA35 /* SpacingDrafters.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		B57760A21B9B39A900BCC655 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B577608D1B9B39A900BCC655 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B57760951B9B39A900BCC655;
-			remoteInfo = Drafter;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		B57760961B9B39A900BCC655 /* Drafter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Drafter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B57760991B9B39A900BCC655 /* Drafter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Drafter.h; sourceTree = "<group>"; };
-		B577609B1B9B39A900BCC655 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B57760A01B9B39A900BCC655 /* DrafterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrafterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B57760A51B9B39A900BCC655 /* DrafterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrafterTests.swift; sourceTree = "<group>"; };
-		B57760A71B9B39A900BCC655 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B57760B01B9B3A4800BCC655 /* AlignDrafters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlignDrafters.swift; sourceTree = "<group>"; };
-		B57760B11B9B3A4800BCC655 /* AttachmentDrafters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentDrafters.swift; sourceTree = "<group>"; };
-		B57760B21B9B3A4800BCC655 /* CenteringDrafters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenteringDrafters.swift; sourceTree = "<group>"; };
-		B57760B31B9B3A4800BCC655 /* PinnedDrafters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinnedDrafters.swift; sourceTree = "<group>"; };
-		B57760B41B9B3A4800BCC655 /* PrivateDrafters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateDrafters.swift; sourceTree = "<group>"; };
-		B57760B51B9B3A4800BCC655 /* PrivatePinnedDrafters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivatePinnedDrafters.swift; sourceTree = "<group>"; };
-		B57760B61B9B3A4800BCC655 /* PrivateSizeDrafters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateSizeDrafters.swift; sourceTree = "<group>"; };
-		B57760B71B9B3A4800BCC655 /* SizeDrafters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeDrafters.swift; sourceTree = "<group>"; };
-		B57760B81B9B3A4800BCC655 /* SpacingDrafters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpacingDrafters.swift; sourceTree = "<group>"; };
+		B5425D401BB983C50056AA35 /* AlignDrafters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlignDrafters.swift; path = Source/AlignDrafters.swift; sourceTree = SOURCE_ROOT; };
+		B5425D411BB983C50056AA35 /* AttachmentDrafters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AttachmentDrafters.swift; path = Source/AttachmentDrafters.swift; sourceTree = SOURCE_ROOT; };
+		B5425D421BB983C50056AA35 /* CenteringDrafters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CenteringDrafters.swift; path = Source/CenteringDrafters.swift; sourceTree = SOURCE_ROOT; };
+		B5425D431BB983C50056AA35 /* Drafter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Drafter.h; path = Source/Drafter.h; sourceTree = SOURCE_ROOT; };
+		B5425D441BB983C50056AA35 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = SOURCE_ROOT; };
+		B5425D451BB983C50056AA35 /* PinnedDrafters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PinnedDrafters.swift; path = Source/PinnedDrafters.swift; sourceTree = SOURCE_ROOT; };
+		B5425D461BB983C50056AA35 /* PrivateDrafters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrivateDrafters.swift; path = Source/PrivateDrafters.swift; sourceTree = SOURCE_ROOT; };
+		B5425D471BB983C50056AA35 /* PrivatePinnedDrafters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrivatePinnedDrafters.swift; path = Source/PrivatePinnedDrafters.swift; sourceTree = SOURCE_ROOT; };
+		B5425D481BB983C50056AA35 /* PrivateSizeDrafters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrivateSizeDrafters.swift; path = Source/PrivateSizeDrafters.swift; sourceTree = SOURCE_ROOT; };
+		B5425D491BB983C50056AA35 /* SizeDrafters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SizeDrafters.swift; path = Source/SizeDrafters.swift; sourceTree = SOURCE_ROOT; };
+		B5425D4A1BB983C50056AA35 /* SpacingDrafters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpacingDrafters.swift; path = Source/SpacingDrafters.swift; sourceTree = SOURCE_ROOT; };
+		B5D0E5A81BB980F70051559F /* Drafter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Drafter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B57760921B9B39A900BCC655 /* Frameworks */ = {
+		B5D0E5A41BB980F70051559F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B577609D1B9B39A900BCC655 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B57760A11B9B39A900BCC655 /* Drafter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B577608C1B9B39A900BCC655 = {
+		B5425D561BB984810056AA35 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B57760981B9B39A900BCC655 /* Drafter */,
-				B57760A41B9B39A900BCC655 /* DrafterTests */,
-				B57760971B9B39A900BCC655 /* Products */,
+				B5425D441BB983C50056AA35 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B5D0E59E1BB980F70051559F = {
+			isa = PBXGroup;
+			children = (
+				B5D0E5AA1BB980F70051559F /* Source */,
+				B5425D561BB984810056AA35 /* Supporting Files */,
+				B5D0E5A91BB980F70051559F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		B57760971B9B39A900BCC655 /* Products */ = {
+		B5D0E5A91BB980F70051559F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B57760961B9B39A900BCC655 /* Drafter.framework */,
-				B57760A01B9B39A900BCC655 /* DrafterTests.xctest */,
+				B5D0E5A81BB980F70051559F /* Drafter.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B57760981B9B39A900BCC655 /* Drafter */ = {
+		B5D0E5AA1BB980F70051559F /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				B57760B01B9B3A4800BCC655 /* AlignDrafters.swift */,
-				B57760B11B9B3A4800BCC655 /* AttachmentDrafters.swift */,
-				B57760B21B9B3A4800BCC655 /* CenteringDrafters.swift */,
-				B57760B31B9B3A4800BCC655 /* PinnedDrafters.swift */,
-				B57760B41B9B3A4800BCC655 /* PrivateDrafters.swift */,
-				B57760B51B9B3A4800BCC655 /* PrivatePinnedDrafters.swift */,
-				B57760B61B9B3A4800BCC655 /* PrivateSizeDrafters.swift */,
-				B57760B71B9B3A4800BCC655 /* SizeDrafters.swift */,
-				B57760B81B9B3A4800BCC655 /* SpacingDrafters.swift */,
-				B57760991B9B39A900BCC655 /* Drafter.h */,
-				B577609B1B9B39A900BCC655 /* Info.plist */,
+				B5425D401BB983C50056AA35 /* AlignDrafters.swift */,
+				B5425D411BB983C50056AA35 /* AttachmentDrafters.swift */,
+				B5425D421BB983C50056AA35 /* CenteringDrafters.swift */,
+				B5425D431BB983C50056AA35 /* Drafter.h */,
+				B5425D451BB983C50056AA35 /* PinnedDrafters.swift */,
+				B5425D461BB983C50056AA35 /* PrivateDrafters.swift */,
+				B5425D471BB983C50056AA35 /* PrivatePinnedDrafters.swift */,
+				B5425D481BB983C50056AA35 /* PrivateSizeDrafters.swift */,
+				B5425D491BB983C50056AA35 /* SizeDrafters.swift */,
+				B5425D4A1BB983C50056AA35 /* SpacingDrafters.swift */,
 			);
+			name = Source;
 			path = Drafter;
-			sourceTree = "<group>";
-		};
-		B57760A41B9B39A900BCC655 /* DrafterTests */ = {
-			isa = PBXGroup;
-			children = (
-				B57760A51B9B39A900BCC655 /* DrafterTests.swift */,
-				B57760A71B9B39A900BCC655 /* Info.plist */,
-			);
-			path = DrafterTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		B57760931B9B39A900BCC655 /* Headers */ = {
+		B5D0E5A51BB980F70051559F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B577609A1B9B39A900BCC655 /* Drafter.h in Headers */,
+				B5425D4E1BB983C50056AA35 /* Drafter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		B57760951B9B39A900BCC655 /* Drafter */ = {
+		B5D0E5A71BB980F70051559F /* Drafter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B57760AA1B9B39A900BCC655 /* Build configuration list for PBXNativeTarget "Drafter" */;
+			buildConfigurationList = B5D0E5B01BB980F70051559F /* Build configuration list for PBXNativeTarget "Drafter" */;
 			buildPhases = (
-				B57760911B9B39A900BCC655 /* Sources */,
-				B57760921B9B39A900BCC655 /* Frameworks */,
-				B57760931B9B39A900BCC655 /* Headers */,
-				B57760941B9B39A900BCC655 /* Resources */,
+				B5D0E5A31BB980F70051559F /* Sources */,
+				B5D0E5A41BB980F70051559F /* Frameworks */,
+				B5D0E5A51BB980F70051559F /* Headers */,
+				B5D0E5A61BB980F70051559F /* Resources */,
 			);
 			buildRules = (
 			);
@@ -142,72 +117,43 @@
 			);
 			name = Drafter;
 			productName = Drafter;
-			productReference = B57760961B9B39A900BCC655 /* Drafter.framework */;
+			productReference = B5D0E5A81BB980F70051559F /* Drafter.framework */;
 			productType = "com.apple.product-type.framework";
-		};
-		B577609F1B9B39A900BCC655 /* DrafterTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B57760AD1B9B39A900BCC655 /* Build configuration list for PBXNativeTarget "DrafterTests" */;
-			buildPhases = (
-				B577609C1B9B39A900BCC655 /* Sources */,
-				B577609D1B9B39A900BCC655 /* Frameworks */,
-				B577609E1B9B39A900BCC655 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B57760A31B9B39A900BCC655 /* PBXTargetDependency */,
-			);
-			name = DrafterTests;
-			productName = DrafterTests;
-			productReference = B57760A01B9B39A900BCC655 /* DrafterTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B577608D1B9B39A900BCC655 /* Project object */ = {
+		B5D0E59F1BB980F70051559F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Raizlabs;
 				TargetAttributes = {
-					B57760951B9B39A900BCC655 = {
-						CreatedOnToolsVersion = 7.0;
-					};
-					B577609F1B9B39A900BCC655 = {
+					B5D0E5A71BB980F70051559F = {
 						CreatedOnToolsVersion = 7.0;
 					};
 				};
 			};
-			buildConfigurationList = B57760901B9B39A900BCC655 /* Build configuration list for PBXProject "Drafter" */;
+			buildConfigurationList = B5D0E5A21BB980F70051559F /* Build configuration list for PBXProject "Drafter" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = B577608C1B9B39A900BCC655;
-			productRefGroup = B57760971B9B39A900BCC655 /* Products */;
+			mainGroup = B5D0E59E1BB980F70051559F;
+			productRefGroup = B5D0E5A91BB980F70051559F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B57760951B9B39A900BCC655 /* Drafter */,
-				B577609F1B9B39A900BCC655 /* DrafterTests */,
+				B5D0E5A71BB980F70051559F /* Drafter */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B57760941B9B39A900BCC655 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B577609E1B9B39A900BCC655 /* Resources */ = {
+		B5D0E5A61BB980F70051559F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -217,42 +163,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B57760911B9B39A900BCC655 /* Sources */ = {
+		B5D0E5A31BB980F70051559F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B57760BE1B9B3A4800BCC655 /* PrivatePinnedDrafters.swift in Sources */,
-				B57760BC1B9B3A4800BCC655 /* PinnedDrafters.swift in Sources */,
-				B57760B91B9B3A4800BCC655 /* AlignDrafters.swift in Sources */,
-				B57760C01B9B3A4800BCC655 /* SizeDrafters.swift in Sources */,
-				B57760BA1B9B3A4800BCC655 /* AttachmentDrafters.swift in Sources */,
-				B57760BD1B9B3A4800BCC655 /* PrivateDrafters.swift in Sources */,
-				B57760BF1B9B3A4800BCC655 /* PrivateSizeDrafters.swift in Sources */,
-				B57760BB1B9B3A4800BCC655 /* CenteringDrafters.swift in Sources */,
-				B57760C11B9B3A4800BCC655 /* SpacingDrafters.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B577609C1B9B39A900BCC655 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B57760A61B9B39A900BCC655 /* DrafterTests.swift in Sources */,
+				B5425D511BB983C50056AA35 /* PrivateDrafters.swift in Sources */,
+				B5425D531BB983C50056AA35 /* PrivateSizeDrafters.swift in Sources */,
+				B5425D4B1BB983C50056AA35 /* AlignDrafters.swift in Sources */,
+				B5425D551BB983C50056AA35 /* SpacingDrafters.swift in Sources */,
+				B5425D541BB983C50056AA35 /* SizeDrafters.swift in Sources */,
+				B5425D501BB983C50056AA35 /* PinnedDrafters.swift in Sources */,
+				B5425D4D1BB983C50056AA35 /* CenteringDrafters.swift in Sources */,
+				B5425D521BB983C50056AA35 /* PrivatePinnedDrafters.swift in Sources */,
+				B5425D4C1BB983C50056AA35 /* AttachmentDrafters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		B57760A31B9B39A900BCC655 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B57760951B9B39A900BCC655 /* Drafter */;
-			targetProxy = B57760A21B9B39A900BCC655 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		B57760A81B9B39A900BCC655 /* Debug */ = {
+		B5D0E5AE1BB980F70051559F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -289,7 +219,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -300,7 +230,7 @@
 			};
 			name = Debug;
 		};
-		B57760A91B9B39A900BCC655 /* Release */ = {
+		B5D0E5AF1BB980F70051559F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -331,7 +261,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -341,7 +271,7 @@
 			};
 			name = Release;
 		};
-		B57760AB1B9B39A900BCC655 /* Debug */ = {
+		B5D0E5B11BB980F70051559F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -349,7 +279,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Drafter/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.raizlabs.Drafter;
@@ -359,7 +289,7 @@
 			};
 			name = Debug;
 		};
-		B57760AC1B9B39A900BCC655 /* Release */ = {
+		B5D0E5B21BB980F70051559F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -367,7 +297,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Drafter/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.raizlabs.Drafter;
@@ -376,55 +306,28 @@
 			};
 			name = Release;
 		};
-		B57760AE1B9B39A900BCC655 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = DrafterTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.raizlabs.DrafterTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		B57760AF1B9B39A900BCC655 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = DrafterTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.raizlabs.DrafterTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B57760901B9B39A900BCC655 /* Build configuration list for PBXProject "Drafter" */ = {
+		B5D0E5A21BB980F70051559F /* Build configuration list for PBXProject "Drafter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B57760A81B9B39A900BCC655 /* Debug */,
-				B57760A91B9B39A900BCC655 /* Release */,
+				B5D0E5AE1BB980F70051559F /* Debug */,
+				B5D0E5AF1BB980F70051559F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B57760AA1B9B39A900BCC655 /* Build configuration list for PBXNativeTarget "Drafter" */ = {
+		B5D0E5B01BB980F70051559F /* Build configuration list for PBXNativeTarget "Drafter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B57760AB1B9B39A900BCC655 /* Debug */,
-				B57760AC1B9B39A900BCC655 /* Release */,
+				B5D0E5B11BB980F70051559F /* Debug */,
+				B5D0E5B21BB980F70051559F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		B57760AD1B9B39A900BCC655 /* Build configuration list for PBXNativeTarget "DrafterTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B57760AE1B9B39A900BCC655 /* Debug */,
-				B57760AF1B9B39A900BCC655 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = B577608D1B9B39A900BCC655 /* Project object */;
+	rootObject = B5D0E59F1BB980F70051559F /* Project object */;
 }

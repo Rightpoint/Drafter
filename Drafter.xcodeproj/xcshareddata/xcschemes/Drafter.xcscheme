@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B57760951B9B39A900BCC655"
+               BlueprintIdentifier = "B5D0E5A71BB980F70051559F"
                BuildableName = "Drafter.framework"
                BlueprintName = "Drafter"
                ReferencedContainer = "container:Drafter.xcodeproj">
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B577609F1B9B39A900BCC655"
-               BuildableName = "DrafterTests.xctest"
-               BlueprintName = "DrafterTests"
-               ReferencedContainer = "container:Drafter.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B57760951B9B39A900BCC655"
-            BuildableName = "Drafter.framework"
-            BlueprintName = "Drafter"
-            ReferencedContainer = "container:Drafter.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -64,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B57760951B9B39A900BCC655"
+            BlueprintIdentifier = "B5D0E5A71BB980F70051559F"
             BuildableName = "Drafter.framework"
             BlueprintName = "Drafter"
             ReferencedContainer = "container:Drafter.xcodeproj">
@@ -82,7 +63,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B57760951B9B39A900BCC655"
+            BlueprintIdentifier = "B5D0E5A71BB980F70051559F"
             BuildableName = "Drafter.framework"
             BlueprintName = "Drafter"
             ReferencedContainer = "container:Drafter.xcodeproj">
