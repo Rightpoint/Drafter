@@ -123,7 +123,7 @@ These have an optional parameter `offset`. Default `0.0`
 	view.attachTop(toBottomOfView: v)
 	
 	// NOTE the following return an array of constraints
-	// these have an optional param realtion. Default .Equal
+	// these have an optional param relation. Default .Equal
 	view.align(subviews: vs, attribute: NSLayoutAttribute)
 	view.space(subviews: vs, alongAxis: UILayoutConstraintAxis,
 				isPositive: true) // optional: defaults to true 
