@@ -1,3 +1,7 @@
+## Important Notice
+
+This repository is slated for deletion.  Please find other solutions.  
+
 # Drafter
 
 [![CI Status](http://img.shields.io/travis/mattThousand/Drafter.svg?style=flat)](https://travis-ci.org/mattThousand/Drafter)
